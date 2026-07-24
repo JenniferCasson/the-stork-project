@@ -1,0 +1,105 @@
+:root {
+    --forest:#315c4c; --forest-dark:#1f4034; --forest-light:#e8f2ed;
+    --cream:#fffaf0; --warm-white:#fffdf8; --gold:#d6a642; --gold-light:#fff3cf;
+    --blue:#567b8c; --plum:#6b536d; --plum-light:#f2ebf3;
+    --ink:#1f2924; --muted:#66726c; --border:#ddd7c9;
+    --shadow:0 18px 50px rgba(39,67,54,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;padding:20px 12px 60px;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:linear-gradient(180deg,#f7f3e8,#edf4ef 50%,#e5eef1)}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+#celebrationCanvas{position:fixed;inset:0;z-index:9999;pointer-events:none}
+.app{width:min(1240px,100%);margin:auto}
+.hero,.current-week-card,.card,.timeline-section,.memory-card{border:1px solid var(--border);border-radius:24px;background:rgba(255,253,248,.96);box-shadow:var(--shadow)}
+.hero{padding:38px 25px;text-align:center;margin-bottom:22px;background:linear-gradient(145deg,#fffdf8,#e8f2ed)}
+.hero-birds{font-size:2rem;color:var(--forest)}
+.eyebrow{margin:0 0 6px;color:var(--forest);font-size:.72rem;font-weight:900;letter-spacing:.14em}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;color:var(--forest-dark)}
+.hero h1{font-size:clamp(2.5rem,6vw,5rem);margin:6px 0}
+.hero-subtitle{font-weight:700;color:var(--muted)}
+.due-date-pill{display:inline-flex;gap:8px;margin-top:18px;padding:11px 18px;border:1px solid #d7c99e;border-radius:999px;background:var(--gold-light)}
+.current-week-card,.card,.timeline-section,.memory-card{padding:24px}
+.current-week-card{margin-bottom:22px}
+.section-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:20px}
+.section-heading h2{margin:0;font-size:clamp(1.5rem,3vw,2.2rem)}
+.trimester-badge{padding:10px 16px;border-radius:999px;background:var(--forest);color:#fff;font-weight:900}
+.week-feature{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.size-comparison,.bird-comparison{padding:24px;min-height:310px;border-radius:20px;text-align:center}
+.size-comparison{background:#fff7dd;border:1px solid #ead6a0}
+.bird-comparison{background:#eaf3f0;border:1px solid #c9ddd3}
+.size-emoji,.bird-emoji{font-size:clamp(5rem,11vw,8rem)}
+.size-comparison h3,.bird-comparison h3{font-size:clamp(1.6rem,3vw,2.3rem);margin:8px 0}
+.size-comparison p,.bird-comparison p{color:var(--muted);line-height:1.55}
+.dashboard{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(290px,.65fr);gap:22px}
+.main-column,.side-column{display:grid;align-content:start;gap:22px}
+.large-icon{font-size:2.2rem}
+.fact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.fact-card{display:flex;gap:12px;padding:17px;border-radius:17px;background:#f0f5f1;border:1px solid #d8e2dc}
+.fact-icon{font-size:2rem}
+.fact-card h3{margin:0 0 6px;font-family:Arial;font-size:1rem}
+.fact-card p{margin:0;color:var(--muted);font-size:.88rem;line-height:1.5}
+.science-note{display:flex;gap:10px;margin-top:16px;padding:14px;border-left:5px solid var(--gold);border-radius:12px;background:var(--gold-light)}
+.science-note p{margin:0;color:#64542b;font-size:.83rem;line-height:1.5}
+.bird-fact-card{background:linear-gradient(145deg,#edf5f7,#fffdf8)}
+blockquote{margin:0;padding:22px;border-left:6px solid var(--blue);border-radius:16px;background:#fff;color:#344d57;font:italic 1.2rem/1.55 Georgia}
+.parent-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.parent-note{padding:18px;border-radius:17px}
+.parent-note h3{margin-top:0}
+.parent-note p{color:var(--muted);line-height:1.55}
+.mum{background:var(--plum-light)}
+.dad{background:var(--forest-light)}
+.mission-card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px;background:#fff8df}
+.mission-icon{font-size:3rem}
+.mission-checkbox,.week-reviewed-checkbox{display:flex;align-items:center;gap:9px;font-weight:800;cursor:pointer}
+.mission-checkbox input,.week-reviewed-checkbox input{position:absolute;opacity:0}
+.custom-checkbox{display:grid;place-items:center;width:31px;height:31px;border:2px solid #b9b5aa;border-radius:9px;background:#fff;color:transparent}
+input:checked + .custom-checkbox{background:var(--forest);border-color:var(--forest);color:#fff}
+.countdown-card{padding:24px;border-radius:24px;background:linear-gradient(155deg,#315c4c,#1f4034);color:#fff;text-align:center}
+.countdown-card .eyebrow{color:#dceee4}
+.countdown-card>strong{display:block;font:clamp(4rem,10vw,6.5rem)/1 Georgia}
+.countdown-card>span,#pregnancyPercentage{color:#d9e8df}
+.progress{height:16px;margin:20px 0 10px;border-radius:999px;background:rgba(255,255,255,.18);overflow:hidden}
+.progress>div{width:0;height:100%;background:linear-gradient(90deg,#e6bb55,#fff0ae);transition:width .7s}
+.route{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;margin:22px 0}
+.route-line{position:relative;height:7px;border-radius:999px;background:repeating-linear-gradient(90deg,#91a996 0 11px,transparent 11px 18px)}
+#storkTraveller{position:absolute;left:0;top:50%;font-size:2.3rem;transform:translate(-50%,-50%);transition:left .8s}
+.statistics-list>div{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #ebe4d8}
+.statistics-list span{color:var(--muted)}
+.capricorn-note{padding:12px;border-radius:12px;background:var(--plum-light);color:var(--plum);font-size:.8rem;line-height:1.5}
+.milestone-card{text-align:center;background:#fff6da}
+.milestone-icon{font-size:4rem}
+.week-timeline{display:grid;grid-template-columns:repeat(10,minmax(72px,1fr));gap:10px;overflow-x:auto;padding-bottom:8px}
+.week-marker{position:relative;display:grid;place-items:center;gap:4px;min-width:75px;min-height:80px;padding:8px;border:1px solid #ded9cd;border-radius:14px;background:#fff;color:var(--muted)}
+.week-marker span{font-size:1.3rem}
+.week-marker::after{content:"Open";font-size:.58rem;font-weight:900;color:var(--forest)}
+.week-marker--complete{background:var(--forest-light)}
+.week-marker--current{border:3px solid var(--gold);background:var(--gold-light)}
+.week-marker--reviewed::after{content:"Reviewed"}
+.week-marker--reviewed::before{content:"✓";position:absolute;top:4px;right:5px;display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--forest);color:#fff;font-size:.7rem}
+.timeline-intro{color:var(--muted)}
+.memory-card{display:grid;grid-template-columns:.7fr 1.3fr;gap:18px;align-items:end;margin-top:22px}
+textarea{width:100%;min-height:130px;padding:14px;border:1px solid #cfd9d3;border-radius:14px}
+.primary-button{padding:12px 18px;border:0;border-radius:13px;background:var(--forest);color:#fff;font-weight:900}
+.saved-message{color:var(--forest);font-weight:800}
+footer{text-align:center;padding:30px;color:var(--muted);font-size:.8rem}
+.modal[hidden]{display:none}
+.modal{position:fixed;inset:0;z-index:9000;display:flex;align-items:center;justify-content:center;padding:18px}
+.modal-backdrop{position:absolute;inset:0;background:rgba(23,42,34,.67);backdrop-filter:blur(5px)}
+.modal-card{position:relative;z-index:2;width:min(720px,100%);max-height:calc(100vh - 36px);overflow-y:auto;padding:30px;border:3px solid var(--gold);border-radius:26px;background:#fffdf8}
+.modal-close-button{position:absolute;right:14px;top:12px;width:36px;height:36px;border:0;border-radius:50%;background:var(--forest-light);font-size:1.6rem}
+.week-review-comparison{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+.week-review-comparison>div{display:grid;justify-items:center;padding:18px;border:1px solid var(--border);border-radius:17px;text-align:center}
+.week-review-emoji{font-size:4rem}
+.week-review-comparison small,.week-review-bird-fact small{color:var(--forest);font-size:.66rem;font-weight:900;letter-spacing:.1em}
+.week-review-comparison strong{font:1.3rem Georgia;color:var(--forest-dark)}
+.week-review-comparison p{color:var(--muted);line-height:1.45}
+.week-review-facts{display:grid;gap:10px}
+.week-review-fact{display:flex;gap:12px;padding:13px;border-radius:13px;background:#f0f5f1}
+.week-review-fact h3{margin:0 0 4px;font-family:Arial;font-size:.95rem}
+.week-review-fact p{margin:0;color:var(--muted);line-height:1.45}
+.week-review-bird-fact{display:flex;gap:12px;margin:15px 0;padding:14px;border-left:5px solid var(--blue);border-radius:13px;background:#edf5f7}
+.week-reviewed-checkbox{justify-content:center;padding:14px;border-radius:14px;background:var(--gold-light)}
+@media(max-width:920px){.dashboard{grid-template-columns:1fr}.fact-grid{grid-template-columns:1fr}}
+@media(max-width:650px){body{padding:8px}.week-feature,.parent-grid,.week-review-comparison{grid-template-columns:1fr}.mission-card{grid-template-columns:auto 1fr}.mission-checkbox{grid-column:1/-1}.memory-card{grid-template-columns:1fr}.section-heading{align-items:flex-start}.week-timeline{grid-template-columns:repeat(10,76px)}}
