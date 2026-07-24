@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#315c4c">
+    <meta name="description" content="A bird-themed, science-filled pregnancy tracker.">
+    <title>The Stork Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="celebrationCanvas" aria-hidden="true"></canvas>
+
+    <main class="app">
+        <header class="hero">
+            <div class="hero-birds" aria-hidden="true">𓅪 𓅭 𓅰</div>
+            <p class="eyebrow">OPERATION: SECOND BABY</p>
+            <h1>The Stork Project</h1>
+            <p class="hero-subtitle">A highly scientific investigation into one very small human.</p>
+            <div class="due-date-pill">🪺 Estimated hatching date: <strong>23 January 2027</strong></div>
+        </header>
+
+        <section class="current-week-card">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">CURRENT FIELD OBSERVATION</p>
+                    <h2>Pregnancy Week <span id="currentWeek">--</span></h2>
+                </div>
+                <div id="trimesterBadge" class="trimester-badge">Calculating trimester…</div>
+            </div>
+
+            <div class="week-feature">
+                <article class="size-comparison">
+                    <div id="sizeEmoji" class="size-emoji">🥑</div>
+                    <p>This week, Baby is approximately the size of a</p>
+                    <h3 id="sizeName">very mysterious vegetable</h3>
+                    <p id="sizeDescription">Gathering measurements from the nest…</p>
+                </article>
+
+                <article class="bird-comparison">
+                    <p class="eyebrow">ORNITHOLOGICAL COMPARISON</p>
+                    <div id="birdEmoji" class="bird-emoji">🐣</div>
+                    <h3 id="birdComparisonName">Tiny hatchling</h3>
+                    <p id="birdComparisonText">Preparing an appropriately nerdy bird comparison…</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="dashboard">
+            <div class="main-column">
+                <section class="card">
+                    <div class="section-heading">
+                        <div>
+                            <p class="eyebrow">BABY LAB REPORT</p>
+                            <h2>The Science This Week</h2>
+                        </div>
+                        <span class="large-icon">🧬</span>
+                    </div>
+                    <div id="scienceFacts" class="fact-grid"></div>
+                    <div class="science-note">
+                        <span>🔬</span>
+                        <p><strong>Laboratory note:</strong> Every pregnancy develops differently. This tracker is for general information and does not replace advice from the maternity team.</p>
+                    </div>
+                </section>
+
+                <section class="card bird-fact-card">
+                    <p class="eyebrow">AVIAN PEER REVIEW</p>
+                    <h2>Bird Fact of the Week</h2>
+                    <blockquote id="birdFact">Preparing an academically rigorous bird fact…</blockquote>
+                </section>
+
+                <section class="card">
+                    <p class="eyebrow">RESEARCH TEAM NOTES</p>
+                    <h2>This Week for the Parents</h2>
+                    <div class="parent-grid">
+                        <article class="parent-note mum">
+                            <h3>For Mum</h3>
+                            <p id="mumFact">Loading weekly observations…</p>
+                        </article>
+                        <article class="parent-note dad">
+                            <h3>For Dad</h3>
+                            <p id="dadFact">Loading weekly mission support…</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="card mission-card">
+                    <div class="mission-icon">🪹</div>
+                    <div>
+                        <p class="eyebrow">THIS WEEK'S NEST-BUILDING MISSION</p>
+                        <h2 id="missionHeading">Preparing this week's assignment…</h2>
+                        <p id="missionDescription"></p>
+                    </div>
+                    <label class="mission-checkbox">
+                        <input id="weeklyMissionCheckbox" type="checkbox">
+                        <span class="custom-checkbox">✓</span>
+                        Mission complete
+                    </label>
+                </section>
+            </div>
+
+            <aside class="side-column">
+                <section class="countdown-card">
+                    <p class="eyebrow">STORK ARRIVAL COUNTDOWN</p>
+                    <strong id="daysRemaining">---</strong>
+                    <span>days until the estimated arrival</span>
+                    <div class="progress"><div id="countdownProgressFill"></div></div>
+                    <p id="pregnancyPercentage">Calculating flight progress…</p>
+                </section>
+
+                <section class="card">
+                    <p class="eyebrow">STORK DELIVERY ROUTE</p>
+                    <div class="route">
+                        <span>🪺</span>
+                        <div class="route-line"><span id="storkTraveller">🪽</span></div>
+                        <span>👶</span>
+                    </div>
+                    <p id="storkMessage"></p>
+                </section>
+
+                <section class="card">
+                    <p class="eyebrow">CURRENT DATASET</p>
+                    <div class="statistics-list">
+                        <div><span>Gestational week</span><strong id="weekStatistic">--</strong></div>
+                        <div><span>Days completed</span><strong id="daysCompleted">--</strong></div>
+                        <div><span>Days remaining</span><strong id="daysRemainingStatistic">--</strong></div>
+                        <div><span>Trimester</span><strong id="trimesterStatistic">--</strong></div>
+                        <div><span>Likely star sign</span><strong id="starSign">Aquarius ♒</strong></div>
+                    </div>
+                    <p class="capricorn-note">Capricorn monitoring window: <strong>until approximately 19 January</strong>. The research team remains cautiously optimistic.</p>
+                </section>
+
+                <section class="card milestone-card">
+                    <p class="eyebrow">UPCOMING MILESTONE</p>
+                    <div id="milestoneIcon" class="milestone-icon">🥚</div>
+                    <h2 id="milestoneTitle">Preparing milestone…</h2>
+                    <p id="milestoneDescription"></p>
+                </section>
+            </aside>
+        </section>
+
+        <section class="timeline-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">FIELD LOG</p>
+                    <h2>The Forty-Week Migration</h2>
+                </div>
+                <span class="large-icon">🗺️</span>
+            </div>
+            <p class="timeline-intro">Open any week to revisit its vegetable, bird comparison and science report. Tick the report once reviewed.</p>
+            <div id="weekTimeline" class="week-timeline"></div>
+        </section>
+
+        <section class="memory-card">
+            <div>
+                <p class="eyebrow">WEEKLY FIELD NOTE</p>
+                <h2>Record a Memory</h2>
+                <p>Add a scan update, appointment note or funny moment from this week.</p>
+            </div>
+            <textarea id="weeklyMemory" rows="5" placeholder="This week we discovered…"></textarea>
+            <button id="saveMemoryButton" class="primary-button" type="button">Save field note</button>
+            <p id="memorySavedMessage" class="saved-message"></p>
+        </section>
+
+        <footer>🐦 🪺 🐣 Built with science, birds and an unreasonable enthusiasm for vegetable comparisons.</footer>
+    </main>
+
+    <div id="weekReviewModal" class="modal" hidden>
+        <div class="modal-backdrop"></div>
+        <div class="modal-card week-review-card">
+            <button id="closeWeekReviewButton" class="modal-close-button" type="button">×</button>
+            <p class="eyebrow">ARCHIVED FIELD REPORT</p>
+            <h2 id="weekReviewTitle">Pregnancy Week</h2>
+
+            <div class="week-review-comparison">
+                <div>
+                    <span id="weekReviewSizeEmoji" class="week-review-emoji">🌱</span>
+                    <small>Size comparison</small>
+                    <strong id="weekReviewSizeName"></strong>
+                    <p id="weekReviewSizeDescription"></p>
+                </div>
+                <div>
+                    <span id="weekReviewBirdEmoji" class="week-review-emoji">🐣</span>
+                    <small>Bird comparison</small>
+                    <strong id="weekReviewBirdName"></strong>
+                    <p id="weekReviewBirdText"></p>
+                </div>
+            </div>
+
+            <div id="weekReviewFacts" class="week-review-facts"></div>
+
+            <div class="week-review-bird-fact">
+                <span>🪶</span>
+                <div>
+                    <small>Bird fact</small>
+                    <p id="weekReviewBirdFact"></p>
+                </div>
+            </div>
+
+            <label class="week-reviewed-checkbox">
+                <input id="weekReviewedCheckbox" type="checkbox">
+                <span class="custom-checkbox">✓</span>
+                Mark this week's report as reviewed
+            </label>
+        </div>
+    </div>
+
+    <script src="weeks.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
