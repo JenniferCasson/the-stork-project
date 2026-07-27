@@ -634,8 +634,8 @@ footer {
 }
 .title-image {
   display: block;
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   margin: 28px auto 36px;
   object-fit: cover;
   object-position: center;
