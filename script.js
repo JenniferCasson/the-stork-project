@@ -22,3 +22,17 @@ const daysPregnant = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
 const currentWeek = Math.floor(daysPregnant / 7);
 
 document.getElementById("currentWeek").textContent = currentWeek;
+
+const babySizes = {
+  14: "lemon",
+  15: "apple",
+  16: "avocado",
+  17: "pear",
+  18: "sweet potato",
+  19: "mango",
+  20: "banana"
+};
+
+const sizeThisWeek = babySizes[currentWeek] || "tiny mystery fruit";
+
+document.getElementById("babySize").textContent = sizeThisWeek;
