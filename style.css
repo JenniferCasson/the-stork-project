@@ -617,3 +617,12 @@ footer {
     font-size: 128px;
   }
 }
+.operation-title {
+  margin: 0;
+  color: var(--forest);
+  font-size: clamp(34px, 5vw, 64px);
+  line-height: 1;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+}
