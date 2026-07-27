@@ -10,113 +10,190 @@ body {
 }
 
 main {
-  max-width: 1100px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 32px 20px;
 }
 
 .hero {
-  margin-bottom: 32px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 24px;
 }
 
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 13px;
+  font-weight: 700;
   color: #c36f4a;
+  margin: 0 0 10px;
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 68px;
   line-height: 1;
-  margin: 8px 0 16px;
+  margin: 0 0 16px;
   color: #2f6153;
 }
 
-.subtitle {
-  font-size: 22px;
-  max-width: 700px;
+h2 {
+  margin: 0 0 12px;
+  color: #315c4c;
 }
 
-img {
+h3 {
+  margin: 0 0 8px;
+  color: #2f6153;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.subtitle {
+  font-size: 23px;
+  margin-bottom: 18px;
+}
+
+.hero img {
   width: 100%;
-  max-width: 620px;
   border-radius: 18px;
-  display: block;
-  margin: 28px 0;
   border: 1px solid #e2d8c8;
+  background: white;
+}
+
+.pill {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  background: white;
+  border: 1px solid #e2d8c8;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 700;
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 24px 0;
 }
 
-.card,
-.team-section {
+.card {
   background: white;
   border: 1px solid #e2d8c8;
   border-radius: 16px;
   padding: 24px;
 }
 
-.card h2,
-.team-section h2 {
-  margin-top: 0;
-  color: #315c4c;
-}
-
-.highlight-card {
-  background: #fff7ec;
-}
-
-#daysRemaining {
-  display: inline-block;
-  font-size: 48px;
-  font-weight: bold;
+.big-number {
+  display: block;
+  font-size: 54px;
+  line-height: 1;
+  font-weight: 800;
   color: #c36f4a;
+  margin-bottom: 8px;
 }
 
-.team-section {
-  margin-top: 20px;
+.progress {
+  height: 12px;
+  background: #eadfce;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 18px;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #2f6153;
+}
+
+.feature-card {
+  grid-column: span 2;
+  background: #fff7ec;
 }
 
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+  margin-top: 16px;
 }
 
 .team-grid article {
   background: #f6f1e8;
   border-radius: 12px;
-  padding: 20px;
+  padding: 18px;
 }
 
 .team-grid span {
+  display: block;
   font-size: 36px;
+  margin-bottom: 8px;
 }
 
-.team-grid h3 {
-  margin-bottom: 6px;
-  color: #2f6153;
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.week-button {
+  border: 1px solid #d8cbb8;
+  background: #fff;
+  color: #24342f;
+  border-radius: 10px;
+  padding: 10px 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.week-button.current {
+  background: #2f6153;
+  color: white;
+  border-color: #2f6153;
+}
+
+.week-button.past {
+  background: #e8f0ea;
+}
+
+.week-detail {
+  margin-top: 16px;
+  background: #fff7ec;
+  border-radius: 12px;
+  padding: 18px;
 }
 
 footer {
-  margin-top: 32px;
   text-align: center;
-  color: #5f6f68;
+  color: #66756e;
+  margin: 32px 0 8px;
 }
 
-@media (max-width: 750px) {
-  h1 {
-    font-size: 44px;
-  }
-
+@media (max-width: 850px) {
+  .hero,
   .card-grid,
   .team-grid {
     grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    grid-column: auto;
+  }
+
+  h1 {
+    font-size: 46px;
+  }
+
+  .timeline {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
