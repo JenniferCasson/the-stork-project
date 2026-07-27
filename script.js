@@ -1,5 +1,38 @@
 "use strict";
+const cillianFacts = [
 
+"Cillian has spent every day of his life as an only child... for now.",
+
+"By the time Baby arrives, Cillian will have learned more in his first year than almost any other stage of life.",
+
+"Baby will probably recognise Cillian's voice before they're born.",
+
+"Older siblings often become a baby's favourite entertainer.",
+
+"Cillian is almost ready for his biggest promotion yet: Big Brother."
+
+];
+const weeklyMissions = [
+    "Keeping Mum fed 🍕, Cillian entertained 🧸, and convincing Baby to arrive as a Capricorn ♑.",
+
+    "Continue growing Tiny Human #2 while maintaining optimum snack levels.",
+
+    "Conduct further research into whether biscuits improve all scientific outcomes.",
+
+    "Maintain excellent morale across the Research Team.",
+
+    "Monitor stork activity. Reliability remains questionable.",
+
+    "Continue preparing Cillian for his promotion to Big Brother.",
+
+    "Keep the Bird Expert supplied with interesting bird facts.",
+
+    "Finalise nursery preparations without assembling furniture backwards.",
+
+    "Hospital bags at the ready. The stork is now officially on standby.",
+
+    "Await deployment. Baby will ignore all published schedules."
+];
 const DUE_DATE = new Date("2027-01-23T12:00:00");
 const PREGNANCY_LENGTH_DAYS = 280;
 const DAY_IN_MS = 86400000;
@@ -715,7 +748,30 @@ const keys = {
 };
 
 let selectedReviewWeek = null;
+const cillianResponsibilities = [
 
+[
+"🧸 Testing every toy before Baby arrives.",
+"🍓 Performing rigorous snack quality control.",
+"❤️ Keeping everyone smiling.",
+"🐥 Training to become the world's best big brother."
+],
+
+[
+"📚 Reading books with Mum.",
+"🪶 Bird watching with Dad.",
+"🧸 Continuing toy inspections.",
+"❤️ Providing cuddles on demand."
+],
+
+[
+"🎨 Improving artistic skills.",
+"🚂 Testing transport vehicles.",
+"🍌 Ensuring bananas meet quality standards.",
+"🐥 Preparing for promotion."
+]
+
+];
 const $ = id => document.getElementById(id);
 const elements = {
     currentWeek: $("currentWeek"), trimesterBadge: $("trimesterBadge"),
