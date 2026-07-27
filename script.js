@@ -145,7 +145,7 @@ function showWeek(week) {
       </article>
     </div>
   `;
-
+  
   document.querySelectorAll(".week-button").forEach(button => {
     button.classList.toggle("selected", Number(button.dataset.week) === week);
   });
