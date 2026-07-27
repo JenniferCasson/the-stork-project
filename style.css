@@ -42,3 +42,18 @@ section {
   font-weight: bold;
   color: #c36f4a;
 }
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card-grid section {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
