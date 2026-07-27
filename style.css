@@ -562,7 +562,7 @@ footer {
   }
 }
 .route-image {
-  width: min(320px, 100%);
+  width: min(220px, 100%);
   margin: 22px auto 0;
   border-radius: 20px;
   overflow: hidden;
