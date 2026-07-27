@@ -95,60 +95,56 @@ function showWeek(week) {
   const data = weeklyData[week] || weeklyData[4];
   const detail = document.getElementById("weekDetail");
 
-  detail.innerHTML = `
-    <div class="field-report-hero">
-      <div>
-        <p class="eyebrow">Selected Field Report</p>
-        <h3>Week ${week}</h3>
-        <p class="field-report-subtitle">Current specimen: ${data.size} with strong ${data.bird} energy.</p>
-      </div>
+  detail.innerHTML =
+    '<div class="field-report-hero">' +
+      '<div>' +
+        '<p class="eyebrow">Selected Field Report</p>' +
+        '<h3>Week ' + week + '</h3>' +
+        '<p class="field-report-subtitle">Current specimen: ' + data.size + ' with strong ' + data.bird + ' energy.</p>' +
+      '</div>' +
+      '<div class="field-report-badge">' +
+        '<span>' + data.sizeEmoji + '</span>' +
+        '<span>' + data.birdEmoji + '</span>' +
+      '</div>' +
+    '</div>' +
 
-      <div class="field-report-badge">
-        <span>${data.sizeEmoji}</span>
-        <span>${data.birdEmoji}</span>
-      </div>
-    </div>
+    '<div class="comparison-showcase">' +
+      '<article class="showcase-tile produce-tile">' +
+        '<span class="showcase-icon">' + data.sizeEmoji + '</span>' +
+        '<small>Vegetable / Fruit Scale</small>' +
+        '<strong>' + data.size + '</strong>' +
+        '<p>' + data.description + '</p>' +
+      '</article>' +
+      '<article class="showcase-tile bird-tile">' +
+        '<span class="showcase-icon">' + data.birdEmoji + '</span>' +
+        '<small>Bird Scale</small>' +
+        '<strong>' + data.bird + '</strong>' +
+        '<p>' + data.birdFact + '</p>' +
+      '</article>' +
+    '</div>' +
 
-    <div class="comparison-showcase">
-      <article class="showcase-tile produce-tile">
-        <span class="showcase-icon">${data.sizeEmoji}</span>
-        <small>Vegetable / Fruit Scale</small>
-        <strong>${data.size}</strong>
-        <p>${data.description}</p>
-      </article>
+    '<div class="mission-strip">' +
+      '<span>🎯</span>' +
+      '<div>' +
+        '<small>Research Team Mission</small>' +
+        '<strong>' + data.mission + '</strong>' +
+      '</div>' +
+    '</div>' +
 
-      <article class="showcase-tile bird-tile">
-        <span class="showcase-icon">${data.birdEmoji}</span>
-        <small>Bird Scale</small>
-        <strong>${data.bird}</strong>
-        <p>${data.birdFact}</p>
-      </article>
-    </div>
+    '<div class="field-card-row">' +
+      '<article>' +
+        '<span>🔬</span>' +
+        '<small>Abi&apos;s Science Note</small>' +
+        '<p>' + data.science[0].slice(3) + '</p>' +
+      '</article>' +
+      '<article>' +
+        '<span>🪽</span>' +
+        '<small>Stork Status</small>' +
+        '<p>' + routeMessage(Math.round((week / 40) * 100)) + '</p>' +
+      '</article>' +
+    '</div>';
 
-    <div class="mission-strip">
-      <span>🎯</span>
-      <div>
-        <small>Research Team Mission</small>
-        <strong>${data.mission}</strong>
-      </div>
-    </div>
-
-    <div class="field-card-row">
-      <article>
-        <span>🔬</span>
-        <small>Abi's Science Note</small>
-        <p>${data.science[0].slice(3)}</p>
-      </article>
-
-      <article>
-        <span>🪽</span>
-        <small>Stork Status</small>
-        <p>${routeMessage(Math.round((week / 40) * 100))}</p>
-      </article>
-    </div>
-  `;
-
-  document.querySelectorAll(".week-button").forEach(button => {
+  document.querySelectorAll(".week-button").forEach(function (button) {
     button.classList.toggle("selected", Number(button.dataset.week) === week);
   });
 }
@@ -164,12 +160,15 @@ function renderTimeline(currentWeek) {
     button.type = "button";
     button.className = "week-button";
     button.dataset.week = week;
-    button.innerHTML = `<span>${data.sizeEmoji}</span>${week}`;
+    button.innerHTML = '<span>' + data.sizeEmoji + '</span>' + week;
 
     if (week < currentWeek) button.classList.add("past");
     if (week === currentWeek) button.classList.add("current");
 
-    button.addEventListener("click", () => showWeek(week));
+    button.addEventListener("click", function () {
+      showWeek(week);
+    });
+
     timeline.appendChild(button);
   }
 }
@@ -177,30 +176,33 @@ function renderTimeline(currentWeek) {
 function renderPage() {
   const state = pregnancyState();
   const data = weeklyData[state.currentWeek] || weeklyData[4];
-  const capricorn = capricornMessage(state.daysRemaining);
+  const capricorn = capricornMessage();
 
   document.getElementById("daysRemaining").textContent = state.daysRemaining.toLocaleString("en-GB");
   document.getElementById("currentWeek").textContent = state.currentWeek;
   document.getElementById("trimesterText").textContent = trimester(state.currentWeek);
-  document.getElementById("weekDayText").textContent = `Week ${state.currentWeek} + ${state.weekDay} days`;
-  document.getElementById("pregnancyProgress").style.width = `${state.progress}%`;
-  document.getElementById("progressText").textContent = `${state.progress}% of the estimated 40-week migration complete`;
+  document.getElementById("weekDayText").textContent = "Week " + state.currentWeek + " + " + state.weekDay + " days";
+  document.getElementById("pregnancyProgress").style.width = state.progress + "%";
+  document.getElementById("progressText").textContent = state.progress + "% of the estimated 40-week migration complete";
 
   document.getElementById("sizeEmoji").textContent = data.sizeEmoji;
   document.getElementById("sizeName").textContent = data.size;
   document.getElementById("sizeDescription").textContent = data.description;
+
   document.getElementById("birdEmoji").textContent = data.birdEmoji;
   document.getElementById("birdName").textContent = data.bird;
   document.getElementById("birdComparison").textContent = "A carefully peer-reviewed comparison from the Bird Expert's department.";
   document.getElementById("birdFact").textContent = data.birdFact;
 
   document.getElementById("scienceFacts").innerHTML = data.science
-    .map(fact => `<div class="fact-item"><span>${fact.slice(0, 2)}</span><p>${fact.slice(3)}</p></div>`)
+    .map(function (fact) {
+      return '<div class="fact-item"><span>' + fact.slice(0, 2) + '</span><p>' + fact.slice(3) + '</p></div>';
+    })
     .join("");
 
-  document.getElementById("routeTitle").textContent = `Route progress: ${state.progress}%`;
+  document.getElementById("routeTitle").textContent = "Route progress: " + state.progress + "%";
   document.getElementById("routeMessage").textContent = routeMessage(state.progress);
-  document.getElementById("storkMarker").style.left = `${state.progress}%`;
+  document.getElementById("storkMarker").style.left = state.progress + "%";
 
   document.getElementById("capricornTitle").textContent = capricorn.title;
   document.getElementById("capricornText").textContent = capricorn.text;
@@ -212,7 +214,7 @@ function renderPage() {
 const randomWeekButton = document.getElementById("randomWeekButton");
 
 if (randomWeekButton) {
-  randomWeekButton.addEventListener("click", () => {
+  randomWeekButton.addEventListener("click", function () {
     const week = Math.floor(Math.random() * 37) + 4;
     showWeek(week);
   });
