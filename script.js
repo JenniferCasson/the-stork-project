@@ -66,4 +66,8 @@ const thisWeek = weeklyData[currentWeek];
 document.getElementById("babySize").textContent = thisWeek.size;
 document.getElementById("birdComparison").textContent = thisWeek.bird;
 
-document.getElementById("scienceFact").textContent = thisWeek.fact;
+const thisWeek = weeklyData[currentWeek] || {
+  size: "tiny mystery fruit",
+  bird: "a very small mystery hatchling",
+  fact: "Baby is busy growing. The research team is still updating this week's notes."
+};
