@@ -578,3 +578,25 @@ footer {
   object-fit: cover;
   object-position: center;
 }
+.hero-copy::after {
+  display: none;
+  content: none;
+}
+
+.hero-logo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.bird-logo {
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.hero-logo .eyebrow {
+  text-align: center;
+}
