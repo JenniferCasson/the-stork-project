@@ -1,3 +1,4 @@
+
 const dueDate = new Date("2027-01-23T12:00:00");
 const oneDay = 1000 * 60 * 60 * 24;
 const pregnancyLengthDays = 280;
@@ -73,7 +74,7 @@ function routeMessage(progress) {
   return "The stork is basically at the door. Baby remains in charge of final scheduling.";
 }
 
-function capricornMessage() {
+function capricornMessage(daysRemaining) {
   const capricornCutoff = new Date("2027-01-19T23:59:00");
   const daysToCapricornCutoff = Math.ceil((capricornCutoff - new Date()) / oneDay);
 
@@ -89,6 +90,7 @@ function capricornMessage() {
     text: "The negotiations were heartfelt. Baby, naturally, has retained full executive control."
   };
 }
+
 function showWeek(week) {
   const data = weeklyData[week] || weeklyData[4];
   const detail = document.getElementById("weekDetail");
@@ -145,11 +147,7 @@ function showWeek(week) {
       </article>
     </div>
   `;
-  
-  document.querySelectorAll(".week-button").forEach(button => {
-    button.classList.toggle("selected", Number(button.dataset.week) === week);
-  });
-}
+
   document.querySelectorAll(".week-button").forEach(button => {
     button.classList.toggle("selected", Number(button.dataset.week) === week);
   });
@@ -163,10 +161,10 @@ function renderTimeline(currentWeek) {
     const button = document.createElement("button");
     const data = weeklyData[week] || { sizeEmoji: "🌱" };
 
-     button.type = "button";
-     button.className = "week-button";
-     button.dataset.week = week;
-     button.innerHTML = `<span>${data.sizeEmoji}</span>${week}`;
+    button.type = "button";
+    button.className = "week-button";
+    button.dataset.week = week;
+    button.innerHTML = `<span>${data.sizeEmoji}</span>${week}`;
 
     if (week < currentWeek) button.classList.add("past");
     if (week === currentWeek) button.classList.add("current");
@@ -179,7 +177,7 @@ function renderTimeline(currentWeek) {
 function renderPage() {
   const state = pregnancyState();
   const data = weeklyData[state.currentWeek] || weeklyData[4];
-  const capricorn = capricornMessage();
+  const capricorn = capricornMessage(state.daysRemaining);
 
   document.getElementById("daysRemaining").textContent = state.daysRemaining.toLocaleString("en-GB");
   document.getElementById("currentWeek").textContent = state.currentWeek;
@@ -211,9 +209,13 @@ function renderPage() {
   showWeek(state.currentWeek);
 }
 
-document.getElementById("randomWeekButton").addEventListener("click", () => {
-  const week = Math.floor(Math.random() * 37) + 4;
-  showWeek(week);
-});
+const randomWeekButton = document.getElementById("randomWeekButton");
+
+if (randomWeekButton) {
+  randomWeekButton.addEventListener("click", () => {
+    const week = Math.floor(Math.random() * 37) + 4;
+    showWeek(week);
+  });
+}
 
 renderPage();
