@@ -824,99 +824,117 @@ footer {
     transform: translateY(-8px) rotate(3deg);
   }
 }
-.vegetable-card {
-  position: relative;
-  min-height: 520px;
-  display: grid;
-  grid-template-columns: 1fr 1.05fr;
+.comparison-panel {
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
+}
+
+.comparison-card {
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  background:
-    radial-gradient(circle at 72% 46%, rgba(255, 218, 76, 0.42), transparent 28%),
-    radial-gradient(circle at 88% 86%, rgba(255, 255, 255, 0.8), transparent 24%),
-    linear-gradient(135deg, #fff9df, #fff1b8);
+  justify-content: center;
+  gap: 18px;
+  padding: 42px 34px;
+  text-align: center;
 }
 
-.vegetable-card::before {
-  content: "Snack scale certified";
-  position: absolute;
-  right: 28px;
-  top: 28px;
-  z-index: 3;
-  padding: 10px 16px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.76);
+.vegetable-card,
+.bird-card {
+  background: rgba(255, 253, 248, 0.78);
+}
+
+.vegetable-card {
+  border-color: #ead08a;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255, 224, 104, 0.22), transparent 28%),
+    #fffaf0;
+}
+
+.bird-card {
+  border-color: #c6ded8;
+  background:
+    radial-gradient(circle at 50% 28%, rgba(155, 199, 207, 0.24), transparent 30%),
+    #f3fbf8;
+}
+
+.vegetable-card::before,
+.bird-card::before,
+.comparison-card::after {
+  display: none;
+}
+
+.comparison-card .eyebrow {
+  position: static;
+  margin: 0;
+  color: #6c7b74;
+  font-size: 15px;
+  letter-spacing: 4px;
+}
+
+.comparison-emoji {
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  font-size: clamp(120px, 14vw, 190px);
+  line-height: 1;
+  transform: none;
+  animation: comparisonFloat 4s ease-in-out infinite;
+}
+
+.bird-card .comparison-emoji {
+  animation-delay: 0.7s;
+}
+
+.comparison-card h2 {
+  margin: 0;
   color: var(--forest);
-  font-size: 13px;
-  font-weight: 900;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(44px, 6vw, 76px);
+  line-height: 0.95;
+  text-wrap: balance;
 }
 
-.vegetable-card .eyebrow {
-  position: absolute;
-  top: 30px;
-  left: 30px;
+.comparison-card h2::before {
+  content: "";
 }
 
-.vegetable-card .comparison-emoji {
-  width: min(36vw, 360px);
-  height: min(36vw, 360px);
-  min-width: 240px;
-  min-height: 240px;
-  margin: 54px 0 0;
-  border-radius: 46px;
-  background:
-    radial-gradient(circle at 35% 28%, rgba(255, 255, 255, 0.85), transparent 34%),
-    rgba(255, 255, 255, 0.46);
-  font-size: clamp(150px, 20vw, 250px);
-  box-shadow:
-    inset 0 0 0 1px rgba(36, 52, 47, 0.08),
-    0 28px 70px rgba(181, 142, 25, 0.25);
-  transform: rotate(-4deg);
-  animation: lemonHero 3.8s ease-in-out infinite;
+.comparison-card p:not(.eyebrow) {
+  max-width: 700px;
+  margin: 0;
+  color: #65756d;
+  font-size: clamp(21px, 2.2vw, 30px);
+  font-weight: 700;
+  line-height: 1.35;
 }
 
-.vegetable-card h2 {
-  font-size: clamp(64px, 9vw, 118px);
-  line-height: 0.85;
-  margin: 70px 0 18px;
+.vegetable-card p:not(.eyebrow)::before {
+  content: "This week, Baby is approximately the size of a ";
 }
 
-.vegetable-card h2::before {
-  content: "≈ ";
-  color: var(--coral);
-}
-
-.vegetable-card p:not(.eyebrow) {
-  max-width: 420px;
-  font-size: 24px;
-}
-
-@keyframes lemonHero {
+@keyframes comparisonFloat {
   0%, 100% {
-    transform: translateY(0) rotate(-4deg) scale(1);
+    transform: translateY(0) rotate(-2deg);
   }
 
   50% {
-    transform: translateY(-10px) rotate(2deg) scale(1.03);
+    transform: translateY(-10px) rotate(2deg);
   }
 }
 
-@media (max-width: 850px) {
-  .vegetable-card {
+@media (max-width: 920px) {
+  .comparison-panel {
     grid-template-columns: 1fr;
-    min-height: auto;
   }
 
-  .vegetable-card .comparison-emoji {
-    width: 220px;
-    height: 220px;
-    min-width: 0;
-    min-height: 0;
-    font-size: 150px;
-    margin-top: 70px;
-  }
-
-  .vegetable-card h2 {
-    margin-top: 0;
+  .comparison-card {
+    min-height: 360px;
   }
 }
