@@ -94,58 +94,62 @@ function showWeek(week) {
   const detail = document.getElementById("weekDetail");
 
   detail.innerHTML = `
-    <div class="field-report-header">
+    <div class="field-report-hero">
       <div>
         <p class="eyebrow">Selected Field Report</p>
         <h3>Week ${week}</h3>
+        <p class="field-report-subtitle">Current specimen: ${data.size} with strong ${data.bird} energy.</p>
       </div>
-      <div class="field-report-emoji">
+
+      <div class="field-report-badge">
         <span>${data.sizeEmoji}</span>
         <span>${data.birdEmoji}</span>
       </div>
     </div>
 
-    <div class="field-report-feature">
-      <div>
-        <span class="mini-label">Vegetable / Fruit Scale</span>
+    <div class="comparison-showcase">
+      <article class="showcase-tile produce-tile">
+        <span class="showcase-icon">${data.sizeEmoji}</span>
+        <small>Vegetable / Fruit Scale</small>
         <strong>${data.size}</strong>
         <p>${data.description}</p>
-      </div>
+      </article>
 
-      <div>
-        <span class="mini-label">Bird Scale</span>
+      <article class="showcase-tile bird-tile">
+        <span class="showcase-icon">${data.birdEmoji}</span>
+        <small>Bird Scale</small>
         <strong>${data.bird}</strong>
         <p>${data.birdFact}</p>
+      </article>
+    </div>
+
+    <div class="mission-strip">
+      <span>🎯</span>
+      <div>
+        <small>Research Team Mission</small>
+        <strong>${data.mission}</strong>
       </div>
     </div>
 
-    <div class="field-report-notes">
+    <div class="field-card-row">
       <article>
         <span>🔬</span>
-        <div>
-          <strong>Abi's Science Note</strong>
-          <p>${data.science[0].slice(3)}</p>
-        </div>
-      </article>
-
-      <article>
-        <span>🎯</span>
-        <div>
-          <strong>Research Team Mission</strong>
-          <p>${data.mission}</p>
-        </div>
+        <small>Abi's Science Note</small>
+        <p>${data.science[0].slice(3)}</p>
       </article>
 
       <article>
         <span>🪽</span>
-        <div>
-          <strong>Stork Status</strong>
-          <p>${routeMessage(Math.round((week / 40) * 100))}</p>
-        </div>
+        <small>Stork Status</small>
+        <p>${routeMessage(Math.round((week / 40) * 100))}</p>
       </article>
     </div>
   `;
 
+  document.querySelectorAll(".week-button").forEach(button => {
+    button.classList.toggle("selected", Number(button.dataset.week) === week);
+  });
+}
   document.querySelectorAll(".week-button").forEach(button => {
     button.classList.toggle("selected", Number(button.dataset.week) === week);
   });
