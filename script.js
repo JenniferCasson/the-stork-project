@@ -187,7 +187,8 @@ function renderPage() {
 
   document.getElementById("sizeEmoji").textContent = data.sizeEmoji;
   document.getElementById("sizeName").textContent = data.size;
-  document.getElementById("sizeDescription").textContent = data.description;
+  document.getElementById("sizeDescription").textContent =
+  "This week, Baby is approximately the size of a " + data.size + ". " + data.description;
 
   document.getElementById("birdEmoji").textContent = data.birdEmoji;
   document.getElementById("birdName").textContent = data.bird;
