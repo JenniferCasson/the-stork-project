@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f1e8;
+  color: #24342f;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 8px;
+  color: #2f6153;
+}
+
+h2 {
+  color: #315c4c;
+}
+
+img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 16px;
+  display: block;
+  margin: 24px 0;
+}
+
+section {
+  background: white;
+  border: 1px solid #e2d8c8;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+#daysRemaining {
+  font-size: 40px;
+  font-weight: bold;
+  color: #c36f4a;
+}
