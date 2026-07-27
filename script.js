@@ -23,30 +23,45 @@ const currentWeek = Math.floor(daysPregnant / 7);
 
 document.getElementById("currentWeek").textContent = currentWeek;
 
-const babySizes = {
-  14: "lemon",
-  15: "apple",
-  16: "avocado",
-  17: "pear",
-  18: "sweet potato",
-  19: "mango",
-  20: "banana"
+const weeklyData = {
+  14: {
+    size: "lemon",
+    bird: "a growing swallow chick",
+    fact: "Baby can make tiny facial movements this week."
+  },
+  15: {
+    size: "apple",
+    bird: "a fledgling house sparrow",
+    fact: "Baby’s skeleton is becoming more visible on scans."
+  },
+  16: {
+    size: "avocado",
+    bird: "a tiny puffin chick",
+    fact: "Baby may start making small coordinated movements."
+  },
+  17: {
+    size: "pear",
+    bird: "a young robin",
+    fact: "Baby is growing quickly and practising little movements."
+  },
+  18: {
+    size: "sweet potato",
+    bird: "a fluffy duckling",
+    fact: "Baby’s hearing structures are developing."
+  },
+  19: {
+    size: "mango",
+    bird: "a small blackbird chick",
+    fact: "Baby’s senses are continuing to develop."
+  },
+  20: {
+    size: "banana",
+    bird: "a very busy baby blue tit",
+    fact: "This is around the halfway point of pregnancy."
+  }
 };
 
-const sizeThisWeek = babySizes[currentWeek] || "tiny mystery fruit";
+const thisWeek = weeklyData[currentWeek];
 
-document.getElementById("babySize").textContent = sizeThisWeek;
-
-const birdComparisons = {
-  14: "a growing swallow chick",
-  15: "a fledgling house sparrow",
-  16: "a tiny puffin chick",
-  17: "a young robin",
-  18: "a fluffy duckling",
-  19: "a small blackbird chick",
-  20: "a very busy baby blue tit"
-};
-
-const birdThisWeek = birdComparisons[currentWeek] || "a very small mystery hatchling";
-
-document.getElementById("birdComparison").textContent = birdThisWeek;
+document.getElementById("babySize").textContent = thisWeek.size;
+document.getElementById("birdComparison").textContent = thisWeek.bird;
