@@ -89,22 +89,66 @@ function capricornMessage() {
     text: "The negotiations were heartfelt. Baby, naturally, has retained full executive control."
   };
 }
-
 function showWeek(week) {
   const data = weeklyData[week] || weeklyData[4];
   const detail = document.getElementById("weekDetail");
 
   detail.innerHTML = `
-    <h3>Week ${week} Field Report</h3>
-    <div class="week-detail-grid">
-      <p><strong>${data.sizeEmoji} Size:</strong> ${data.size} - ${data.description}</p>
-      <p><strong>${data.birdEmoji} Bird:</strong> ${data.bird}</p>
-      <p><strong>🔬 Abi's note:</strong> ${data.science[0]}</p>
-      <p><strong>🪶 Bird fact:</strong> ${data.birdFact}</p>
-      <p><strong>🎯 Mission:</strong> ${data.mission}</p>
-      <p><strong>🪽 Stork status:</strong> ${routeMessage(Math.round((week / 40) * 100))}</p>
+    <div class="field-report-header">
+      <div>
+        <p class="eyebrow">Selected Field Report</p>
+        <h3>Week ${week}</h3>
+      </div>
+      <div class="field-report-emoji">
+        <span>${data.sizeEmoji}</span>
+        <span>${data.birdEmoji}</span>
+      </div>
+    </div>
+
+    <div class="field-report-feature">
+      <div>
+        <span class="mini-label">Vegetable / Fruit Scale</span>
+        <strong>${data.size}</strong>
+        <p>${data.description}</p>
+      </div>
+
+      <div>
+        <span class="mini-label">Bird Scale</span>
+        <strong>${data.bird}</strong>
+        <p>${data.birdFact}</p>
+      </div>
+    </div>
+
+    <div class="field-report-notes">
+      <article>
+        <span>🔬</span>
+        <div>
+          <strong>Abi's Science Note</strong>
+          <p>${data.science[0].slice(3)}</p>
+        </div>
+      </article>
+
+      <article>
+        <span>🎯</span>
+        <div>
+          <strong>Research Team Mission</strong>
+          <p>${data.mission}</p>
+        </div>
+      </article>
+
+      <article>
+        <span>🪽</span>
+        <div>
+          <strong>Stork Status</strong>
+          <p>${routeMessage(Math.round((week / 40) * 100))}</p>
+        </div>
+      </article>
     </div>
   `;
+
+  document.querySelectorAll(".week-button").forEach(button => {
+    button.classList.toggle("selected", Number(button.dataset.week) === week);
+  });
 }
 
 function renderTimeline(currentWeek) {
@@ -115,9 +159,10 @@ function renderTimeline(currentWeek) {
     const button = document.createElement("button");
     const data = weeklyData[week] || { sizeEmoji: "🌱" };
 
-    button.type = "button";
-    button.className = "week-button";
-    button.innerHTML = `<span>${data.sizeEmoji}</span>${week}`;
+     button.type = "button";
+     button.className = "week-button";
+     button.dataset.week = week;
+     button.innerHTML = `<span>${data.sizeEmoji}</span>${week}`;
 
     if (week < currentWeek) button.classList.add("past");
     if (week === currentWeek) button.classList.add("current");
