@@ -6,76 +6,99 @@
   <title>The Stork Project</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <main>
     <header class="hero">
-      <p class="eyebrow">Operation: Baby #2</p>
-      <h1>The Stork Project</h1>
-      <p class="subtitle">
-        A bird-themed baby tracker for Robert, Abi, Cillian, and Baby #2.
-      </p>
+      <div>
+        <p class="eyebrow">Operation: Baby #2</p>
+        <h1>The Stork Project</h1>
+        <p class="subtitle">
+          A bird-themed baby tracker for Robert, Abi, Cillian, and one very small incoming human.
+        </p>
+        <p>
+          Built with science, family updates, questionable stork logistics, and an unreasonable enthusiasm for fruit comparisons.
+        </p>
+        <div class="pill">Estimated Hatching Date: <strong>23 January 2027</strong></div>
+      </div>
 
       <img src="family.png" alt="Robert, Abi and Cillian">
     </header>
 
-    <div class="card-grid">
-      <section class="card">
-        <h2>Estimated Hatching Date</h2>
-        <p>23 January 2027</p>
-      </section>
+    <section class="card-grid">
+      <article class="card">
+        <p class="eyebrow">Countdown</p>
+        <span id="daysRemaining" class="big-number">...</span>
+        <p>days to go</p>
+        <div class="progress">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+      </article>
 
-      <section class="card highlight-card">
-        <h2>Countdown</h2>
-        <p><span id="daysRemaining">...</span> days to go</p>
-      </section>
+      <article class="card">
+        <p class="eyebrow">Current Week</p>
+        <span id="currentWeek" class="big-number">...</span>
+        <p id="trimesterText">Calculating trimester...</p>
+      </article>
 
-      <section class="card">
-        <h2>Current Week</h2>
-        <p>Baby is currently around week <span id="currentWeek">...</span>.</p>
-      </section>
-
-      <section class="card">
-        <h2>This Week</h2>
-        <p>Baby is about the size of a <span id="babySize">...</span>.</p>
-      </section>
-
-      <section class="card">
-        <h2>Bird Comparison</h2>
-        <p>This week, Baby is scientifically comparable to <span id="birdComparison">...</span>.</p>
-      </section>
-
-      <section class="card">
-        <h2>Science Fact</h2>
+      <article class="card">
+        <p class="eyebrow">This Week</p>
+        <h2 id="babySize">...</h2>
         <p id="scienceFact">...</p>
-      </section>
-    </div>
+      </article>
 
-    <section class="team-section">
-      <h2>Research Team</h2>
+      <article class="card feature-card">
+        <p class="eyebrow">Bird Comparison</p>
+        <h2 id="birdComparison">...</h2>
+        <p id="birdFact">...</p>
+      </article>
+
+      <article class="card">
+        <p class="eyebrow">Current Mission</p>
+        <h2 id="missionTitle">...</h2>
+        <p id="missionText">...</p>
+      </article>
+    </section>
+
+    <section class="card">
+      <p class="eyebrow">Research Team</p>
+      <h2>The People Running The Project</h2>
 
       <div class="team-grid">
         <article>
           <span>👩‍🔬</span>
           <h3>Abi</h3>
-          <p>Scientist · Mum · Human Construction Specialist</p>
+          <p>Scientist, Mum, and Human Construction Specialist.</p>
         </article>
 
         <article>
           <span>🦅</span>
           <h3>Robert</h3>
-          <p>Bird Expert · Dad · Official Nest Builder</p>
+          <p>Bird Expert, Dad, and Official Nest Builder.</p>
         </article>
 
         <article>
           <span>🐥</span>
           <h3>Cillian</h3>
-          <p>Future Big Brother · Chief Happiness Officer</p>
+          <p>Future Big Brother and Chief Happiness Officer.</p>
         </article>
       </div>
     </section>
 
+    <section class="card">
+      <p class="eyebrow">Field Log</p>
+      <h2>The Forty-Week Migration</h2>
+      <p>Click a week to see the size, bird comparison, and science note.</p>
+
+      <div id="timeline" class="timeline"></div>
+
+      <div id="weekDetail" class="week-detail">
+        Select a week to inspect the field notes.
+      </div>
+    </section>
+
     <footer>
-      Built with science, birds, and an unreasonable enthusiasm for vegetable comparisons.
+      Built for Robert, Abi, Cillian, and Baby #2.
     </footer>
   </main>
 
