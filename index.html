@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,46 +8,77 @@
 </head>
 <body>
   <main>
-    <h1>The Stork Project</h1>
-    <p>A bird-themed baby tracker for Robert, Abi, Cillian, and Baby #2.</p>
+    <header class="hero">
+      <p class="eyebrow">Operation: Baby #2</p>
+      <h1>The Stork Project</h1>
+      <p class="subtitle">
+        A bird-themed baby tracker for Robert, Abi, Cillian, and Baby #2.
+      </p>
 
-    <img src="family.png" alt="Robert, Abi and Cillian">
-    
-<div class="card-grid">
-  
-    <section>
-      <h2>Estimated Hatching Date</h2>
-      <p>23 January 2027</p>
+      <img src="family.png" alt="Robert, Abi and Cillian">
+    </header>
+
+    <div class="card-grid">
+      <section class="card">
+        <h2>Estimated Hatching Date</h2>
+        <p>23 January 2027</p>
+      </section>
+
+      <section class="card highlight-card">
+        <h2>Countdown</h2>
+        <p><span id="daysRemaining">...</span> days to go</p>
+      </section>
+
+      <section class="card">
+        <h2>Current Week</h2>
+        <p>Baby is currently around week <span id="currentWeek">...</span>.</p>
+      </section>
+
+      <section class="card">
+        <h2>This Week</h2>
+        <p>Baby is about the size of a <span id="babySize">...</span>.</p>
+      </section>
+
+      <section class="card">
+        <h2>Bird Comparison</h2>
+        <p>This week, Baby is scientifically comparable to <span id="birdComparison">...</span>.</p>
+      </section>
+
+      <section class="card">
+        <h2>Science Fact</h2>
+        <p id="scienceFact">...</p>
+      </section>
+    </div>
+
+    <section class="team-section">
+      <h2>Research Team</h2>
+
+      <div class="team-grid">
+        <article>
+          <span>👩‍🔬</span>
+          <h3>Abi</h3>
+          <p>Scientist · Mum · Human Construction Specialist</p>
+        </article>
+
+        <article>
+          <span>🦅</span>
+          <h3>Robert</h3>
+          <p>Bird Expert · Dad · Official Nest Builder</p>
+        </article>
+
+        <article>
+          <span>🐥</span>
+          <h3>Cillian</h3>
+          <p>Future Big Brother · Chief Happiness Officer</p>
+        </article>
+      </div>
     </section>
 
-    <section>
-      <h2>Countdown</h2>
-      <p><span id="daysRemaining">...</span> days to go</p>
-    </section>
+    <footer>
+      Built with science, birds, and an unreasonable enthusiasm for vegetable comparisons.
+    </footer>
   </main>
 
-  <section>
-  <h2>Current Week</h2>
-  <p>Baby is currently around week <span id="currentWeek">...</span>.</p>
-</section>
-  
-<section>
-  <h2>This Week</h2>
-  <p>Baby is about the size of a <span id="babySize">...</span>.</p>
-</section>
-
-  <section>
-  <h2>Bird Comparison</h2>
-  <p>This week, Baby is scientifically comparable to <span id="birdComparison">...</span>.</p>
-</section>
-
-  <section>
-  <h2>Science Fact</h2>
-  <p id="scienceFact">...</p>
-</section>
-
-  </div>
-  
   <script src="script.js"></script>
 </body>
 </html>
