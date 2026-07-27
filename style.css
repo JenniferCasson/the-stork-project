@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,54 +10,113 @@ body {
 }
 
 main {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 32px 20px;
+  padding: 40px 20px;
+}
+
+.hero {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #c36f4a;
 }
 
 h1 {
-  font-size: 48px;
-  margin-bottom: 8px;
+  font-size: 64px;
+  line-height: 1;
+  margin: 8px 0 16px;
   color: #2f6153;
 }
 
-h2 {
-  color: #315c4c;
+.subtitle {
+  font-size: 22px;
+  max-width: 700px;
 }
 
 img {
   width: 100%;
-  max-width: 520px;
-  border-radius: 16px;
+  max-width: 620px;
+  border-radius: 18px;
   display: block;
-  margin: 24px 0;
-}
-
-section {
-  background: white;
+  margin: 28px 0;
   border: 1px solid #e2d8c8;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 20px 0;
 }
 
-#daysRemaining {
-  font-size: 40px;
-  font-weight: bold;
-  color: #c36f4a;
-}
 .card-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
-.card-grid section {
-  margin: 0;
+.card,
+.team-section {
+  background: white;
+  border: 1px solid #e2d8c8;
+  border-radius: 16px;
+  padding: 24px;
 }
 
-@media (max-width: 700px) {
-  .card-grid {
+.card h2,
+.team-section h2 {
+  margin-top: 0;
+  color: #315c4c;
+}
+
+.highlight-card {
+  background: #fff7ec;
+}
+
+#daysRemaining {
+  display: inline-block;
+  font-size: 48px;
+  font-weight: bold;
+  color: #c36f4a;
+}
+
+.team-section {
+  margin-top: 20px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.team-grid article {
+  background: #f6f1e8;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.team-grid span {
+  font-size: 36px;
+}
+
+.team-grid h3 {
+  margin-bottom: 6px;
+  color: #2f6153;
+}
+
+footer {
+  margin-top: 32px;
+  text-align: center;
+  color: #5f6f68;
+}
+
+@media (max-width: 750px) {
+  h1 {
+    font-size: 44px;
+  }
+
+  .card-grid,
+  .team-grid {
     grid-template-columns: 1fr;
   }
 }
