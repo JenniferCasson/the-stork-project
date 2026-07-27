@@ -632,3 +632,12 @@ footer {
   height: auto;
   margin: 44px auto 34px;
 }
+.title-image {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 28px auto 36px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
