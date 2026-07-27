@@ -191,7 +191,8 @@ function renderPage() {
 
   document.getElementById("birdEmoji").textContent = data.birdEmoji;
   document.getElementById("birdName").textContent = data.bird;
-  document.getElementById("birdComparison").textContent = "A carefully peer-reviewed comparison from the Bird Expert's department.";
+  document.getElementById("birdComparison").textContent =
+  "Robert's department has reviewed the evidence and declared this comparison extremely official.";
   document.getElementById("birdFact").textContent = data.birdFact;
 
   document.getElementById("scienceFacts").innerHTML = data.science
