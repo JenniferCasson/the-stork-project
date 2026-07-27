@@ -65,3 +65,5 @@ const thisWeek = weeklyData[currentWeek];
 
 document.getElementById("babySize").textContent = thisWeek.size;
 document.getElementById("birdComparison").textContent = thisWeek.bird;
+
+document.getElementById("scienceFact").textContent = thisWeek.fact;
