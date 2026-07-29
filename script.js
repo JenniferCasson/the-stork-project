@@ -183,9 +183,9 @@ function renderPage() {
   document.getElementById("currentWeek").textContent = state.currentWeek;
   document.getElementById("trimesterText").textContent = trimester(state.currentWeek);
   document.getElementById("weekDayText").textContent = `Week ${state.currentWeek} + ${state.weekDay} days`;
-  document.getElementById("pregnancyProgress").style.width = `${state.progress}%`;
-  document.getElementById("progressText").textContent = `${state.progress}% of the estimated 40-week migration complete`;
-
+  setWidth("pregnancyProgress", `${state.progress}%`);
+setText("progressText", `${state.progress}% of the estimated 40-week migration complete`);
+  
   document.getElementById("sizeEmoji").textContent = data.sizeEmoji;
   document.getElementById("sizeName").textContent = data.size;
   document.getElementById("sizeDescription").textContent = data.description;
@@ -217,5 +217,13 @@ if (randomWeekButton) {
     showWeek(week);
   });
 }
+function setText(id, value) {
+  const element = document.getElementById(id);
+  if (element) element.textContent = value;
+}
 
+function setWidth(id, value) {
+  const element = document.getElementById(id);
+  if (element) element.style.width = value;
+}
 renderPage();
