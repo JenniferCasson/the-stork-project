@@ -41,16 +41,16 @@ const scienceNotes = [
 const weirdBirdFacts = [
   "Puffins can hold several fish in their beak at once, which is exactly the snack-carrying energy required here.",
   "Barn owls fly almost silently because their feathers break up turbulence.",
-  "Ducklings can communicate with their mother before they hatch - so geting talking to the bump just incase.",
+  "Ducklings can communicate with their mother before they hatch - so getting talking to the bump just in case.",
   "Starlings can mimic machinery, phones and other birds, which feels like showing off.",
   "Some chicks call from inside the egg before hatching, presumably to comment on conditions.",
   "Kestrels can hover in one place while hunting, which is a skill the stork has not yet demonstrated.",
   "Young blackbirds often leave the nest before they can fly properly. Bold strategy - feels like a boy thing to do.",
-  "Goslings imprint quickly, so the research team should prepare for strong opinions."
-  "An ostrich's eye is bigger than its brain - Reminds me of this big bird enthusiast..."
-  "Most birds have hollow bones to help reduce weight for flight."
-  "Some vultures cool themselves off by urinating on their own legs - Such a boy thing to do"  
-  "Pigeons can recognize themselves in mirrors - Research team is unsure how this was tested."
+  "Goslings imprint quickly, so the research team should prepare for strong opinions.",
+  "An ostrich's eye is bigger than its brain - reminds me of this big bird enthusiast...",
+  "Most birds have hollow bones to help reduce weight for flight.",
+  "Some vultures cool themselves off by urinating on their own legs - such a boy thing to do.",
+  "Pigeons can recognize themselves in mirrors - research team is unsure how this was tested."
 ];
 
 const missions = [
@@ -144,6 +144,7 @@ function setWidth(id, value) {
 
 function renderScience(startIndex = 0) {
   const facts = [0, 1, 2].map(offset => scienceNotes[(startIndex + offset) % scienceNotes.length]);
+
   setHTML("scienceFacts", facts
     .map((fact, index) => `<div class="fact-item"><span>${["🧠", "❤️", "🦴"][index]}</span><p>${fact}</p></div>`)
     .join(""));
@@ -163,7 +164,9 @@ function showWeek(week) {
       <div class="week-notes">
         <p><strong>Produce scale:</strong> ${data.item}</p>
         <p><strong>Bird comparison:</strong> ${data.bird}</p>
-
+        <p><strong>Mum note:</strong> ${data.science}</p>
+        <p><strong>Dad fact:</strong> ${data.birdFact}</p>
+        <p><strong>Mission:</strong> ${data.mission}</p>
       </div>
     </div>
   `);
@@ -176,11 +179,13 @@ function showWeek(week) {
 function renderTimeline(currentWeek) {
   const timeline = document.getElementById("timeline");
   if (!timeline) return;
+
   timeline.innerHTML = "";
 
   for (let week = 1; week <= 40; week++) {
     const data = weekData(Math.max(4, week));
     const button = document.createElement("button");
+
     button.type = "button";
     button.className = "week-button";
     button.dataset.week = week;
@@ -229,6 +234,7 @@ function renderPage() {
 function openCapricornModal() {
   const modal = document.getElementById("capricornModal");
   if (!modal) return;
+
   modal.classList.add("is-open");
   modal.setAttribute("aria-hidden", "false");
 }
@@ -236,6 +242,7 @@ function openCapricornModal() {
 function closeCapricornModal() {
   const modal = document.getElementById("capricornModal");
   if (!modal) return;
+
   modal.classList.remove("is-open");
   modal.setAttribute("aria-hidden", "true");
 }
@@ -244,6 +251,7 @@ function initialisePage() {
   renderPage();
 
   const countdownCard = document.getElementById("countdownCard");
+
   if (countdownCard) {
     countdownCard.addEventListener("click", event => {
       const card = event.currentTarget;
@@ -262,6 +270,7 @@ function initialisePage() {
 
   let memoCount = 0;
   const negotiateButton = document.getElementById("negotiateButton");
+
   if (negotiateButton) {
     negotiateButton.addEventListener("click", () => {
       const replies = [
@@ -273,15 +282,20 @@ function initialisePage() {
       const capricornReply = document.getElementById("capricornReply");
 
       if (capricornReply) capricornReply.textContent = replies[memoCount % replies.length];
+
       memoCount += 1;
       openCapricornModal();
     });
   }
 
   const closeCapricornModalButton = document.getElementById("closeCapricornModal");
-  if (closeCapricornModalButton) closeCapricornModalButton.addEventListener("click", closeCapricornModal);
+
+  if (closeCapricornModalButton) {
+    closeCapricornModalButton.addEventListener("click", closeCapricornModal);
+  }
 
   const capricornModal = document.getElementById("capricornModal");
+
   if (capricornModal) {
     capricornModal.addEventListener("click", event => {
       if (event.target.id === "capricornModal") closeCapricornModal();
@@ -289,6 +303,7 @@ function initialisePage() {
   }
 
   const routeButton = document.getElementById("routeButton");
+
   if (routeButton) {
     routeButton.addEventListener("click", () => {
       const updates = [
@@ -298,7 +313,10 @@ function initialisePage() {
         "Nest coordinates confirmed. Arrival date still classified by Baby."
       ];
       const routeMessageElement = document.getElementById("routeMessage");
-      if (routeMessageElement) routeMessageElement.textContent = updates[Math.floor(Math.random() * updates.length)];
+
+      if (routeMessageElement) {
+        routeMessageElement.textContent = updates[Math.floor(Math.random() * updates.length)];
+      }
     });
   }
 }
