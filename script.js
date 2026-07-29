@@ -163,9 +163,7 @@ function showWeek(week) {
       <div class="week-notes">
         <p><strong>Produce scale:</strong> ${data.item}</p>
         <p><strong>Bird comparison:</strong> ${data.bird}</p>
-        <p><strong>Mum note:</strong> ${data.science}</p>
-        <p><strong>Dad fact:</strong> ${data.birdFact}</p>
-        <p><strong>Mission:</strong> ${data.mission}</p>
+
       </div>
     </div>
   `);
@@ -308,4 +306,5 @@ function initialisePage() {
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initialisePage);
 } else {
-  initial
+  initialisePage();
+}
