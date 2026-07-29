@@ -120,13 +120,6 @@ function weekData(week) {
   };
 }
 
-function routeMessage(progress) {
-  if (progress < 25) return "The stork is still reviewing the flight plan.";
-  if (progress < 50) return "The stork has left the depot with snacks, paperwork and questionable confidence.";
-  if (progress < 75) return "The stork is airborne. Weather: dramatic. Confidence: improving.";
-  if (progress < 95) return "Final approach is being discussed in a very serious meeting.";
-  return "The stork is circling overhead. Baby remains in charge of final scheduling.";
-}
 
 function capricornMessage() {
   const days = Math.max(0, Math.ceil((capricornDeadline - new Date()) / oneDay));
@@ -243,9 +236,6 @@ function renderPage() {
   setText("birdName", data.bird);
   setText("birdComparison", "Baby is currently being compared with an appropriately sized member of the bird kingdom.");
   setText("birdFact", data.birdFact);
-  setText("routeTitle", `Route progress: ${state.progress}%`);
-  setText("routeMessage", routeMessage(state.progress));
-  setLeft("storkMarker", `${state.progress}%`);
   setLeft("countdownWingMarker", `${state.progress}%`);
 
   renderScience(state.currentWeek);
@@ -323,25 +313,6 @@ function initialisePage() {
       if (event.target.id === "capricornModal") closeCapricornModal();
     });
   }
-
-  const routeButton = document.getElementById("routeButton");
-
-  if (routeButton) {
-    routeButton.addEventListener("click", () => {
-      const updates = [
-        "The stork has requested a snack break and a clearer weather report.",
-        "Route control confirms mild confusion but excellent vibes.",
-        "The stork says everything is under control, which is exactly what a stork would say.",
-        "Nest coordinates confirmed. Arrival date still classified by Baby."
-      ];
-      const routeMessageElement = document.getElementById("routeMessage");
-
-      if (routeMessageElement) {
-        routeMessageElement.textContent = updates[Math.floor(Math.random() * updates.length)];
-      }
-    });
-  }
-}
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initialisePage);
