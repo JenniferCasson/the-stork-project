@@ -51,6 +51,28 @@ const weirdBirdFacts = [
   "Most birds have hollow bones to help reduce weight for flight.",
   "Some vultures cool themselves off by urinating on their own legs - such a boy thing to do.",
   "Pigeons can recognize themselves in mirrors - research team is unsure how this was tested."
+  "Swifts can stay airborne for months at a time, eating and even sleeping while flying. They would be terrible at maternity leave.",
+  "Emperor penguin dads keep the egg warm on their feet for over two months without eating. Robert has no excuses.",
+  "Magpies can recognise familiar human faces, so be nice to them. They remember.",
+  "The wandering albatross has the largest wingspan of any living bird - perfect for giving unsolicited parenting advice from a distance.",
+  "Blue tits can lay up to 16 eggs. Thankfully, humans generally show more restraint.",
+  "Robins are fiercely territorial despite looking adorable. Never judge a bird by its Christmas card.",
+  "Flamingos are naturally grey and only turn pink because of their diet. Proof that you really are what you eat.",
+  "Eagles have eyesight around four to five times better than ours. They definitely spotted that snack before you did.",
+  "Crows can remember people who have been mean to them for years. Hold grudges? Never.",
+  "Ravens have been known to play games just for fun. Finally, a bird with the right priorities.",
+  "Hummingbirds can fly backwards. Handy for reconsidering life choices.",
+  "Woodpeckers peck thousands of times a day without getting headaches. Scientists are understandably jealous.",
+  "Lapwing chicks can feed themselves within hours of hatching. No pressure, Baby.",
+  "Kingfishers dive into water at over 25 mph to catch fish. Your bath time doesn't need to be that dramatic.",
+  "Great crested grebes perform elaborate dances before pairing up. Dating apps could learn a thing or two.",
+  "Barnacle geese migrate thousands of miles every year. Suddenly the drive to Grandma's doesn't seem so bad.",
+  "Peregrine falcons are the fastest animals on Earth, reaching over 200 mph in a dive. Speed limits clearly don't apply.",
+  "Herons can stand perfectly still for ages waiting for prey. Parenthood is excellent training for this skill.",
+  "Owls can't move their eyes, so they turn their whole head instead. Makes family gossip much easier to follow.",
+  "Gannets dive from over 30 metres into the sea to catch fish. Confidence levels: unmatched.",
+  "Canada geese mate for life and will aggressively defend their family. Honestly, fair enough.",
+  "Robins start singing before sunrise. Nobody asked them to.",
 ];
 
 const missions = [
