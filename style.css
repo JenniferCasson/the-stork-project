@@ -683,4 +683,14 @@ footer {
     flex-direction: column;
   }
 }
- 
+ .warning-note {
+  margin: 14px 0 0;
+  padding: 16px 18px;
+  border: 2px solid #d8735d;
+  border-left: 7px solid #d8735d;
+  border-radius: 14px;
+  background: #fff1ec;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 800;
+}
