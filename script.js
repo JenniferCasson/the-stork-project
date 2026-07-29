@@ -305,7 +305,6 @@ function initialisePage() {
   if (closeCapricornModalButton) {
     closeCapricornModalButton.addEventListener("click", closeCapricornModal);
   }
-
   const capricornModal = document.getElementById("capricornModal");
 
   if (capricornModal) {
@@ -314,8 +313,20 @@ function initialisePage() {
     });
   }
 
+  let birdFactIndex = Math.max(0, pregnancyState().currentWeek - 4);
+  const birdFactButton = document.getElementById("birdFactButton");
+
+  if (birdFactButton) {
+    birdFactButton.addEventListener("click", () => {
+      birdFactIndex = (birdFactIndex + 1) % weirdBirdFacts.length;
+      setText("birdFact", weirdBirdFacts[birdFactIndex]);
+    });
+  }
+}
+
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initialisePage);
 } else {
   initialisePage();
 }
+ 
