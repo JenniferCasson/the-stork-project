@@ -8,18 +8,18 @@ const weeklyData = {
   5: { sizeEmoji: "🌾", size: "sesame seed", description: "Only a few millimetres long.", birdEmoji: "🐦", bird: "a grain carried by a finch", science: ["🧠 The neural tube continues forming.", "🫀 The primitive heart structure is developing.", "🧫 Cells are organising into early body systems."], birdFact: "Finch beaks are shaped by diet, habitat and generations of adaptation.", mission: "Set up a shared pregnancy calendar." },
   6: { sizeEmoji: "🫘", size: "lentil", description: "Approximately 5 to 6 mm long.", birdEmoji: "🐤", bird: "a hummingbird's smallest crumb", science: ["🫀 Cardiac activity may be visible on ultrasound.", "🧠 Early brain regions are forming.", "🦴 Limb buds are beginning to appear."], birdFact: "A hummingbird's heart can beat more than 1,000 times per minute in flight.", mission: "Prepare an emergency snack station." },
   7: { sizeEmoji: "🍇", size: "grape", description: "Approximately 10 mm long.", birdEmoji: "🥚", bird: "a small songbird egg", science: ["🧠 Brain and spinal cord development is rapid.", "🦵 Limb buds are lengthening.", "🫁 Major organ foundations continue developing."], birdFact: "Many songbirds hatch helpless and rely completely on their parents.", mission: "Remove one recurring job from Mum's list." },
-  8: { sizeEmoji: "🫐", size: "raspberry", description: "Approximately 16 mm long.", birdEmoji: "🐦", bird: "a newly hatched wren", science: ["👶 Baby is increasingly recognisable as a tiny human form.", "🦵 Arms and legs are lengthening.", "👁️ Early facial features continue forming."], birdFact: "Wrens often build several nests before choosing the winning site.", mission: "Start brainstorming names." },
+  8: { sizeEmoji: "🫐", size: "raspberry", description: "Approximately 16 mm long.", birdEmoji: "🐦", bird: "a newly hatched wren", science: ["👶 Baby is increasingly recognisable as a tiny human form.", "🦵 Arms and legs are lengthening.", "👁️ Early facial features continue forming."], birdFact: "Wrens often build several nests before choosing the winning site.", mission: "Create the first family field note." },
   9: { sizeEmoji: "🍒", size: "cherry", description: "Approximately 22 mm long.", birdEmoji: "🐣", bird: "a tiny newly hatched finch", science: ["🖐️ Hands and feet are becoming more defined.", "🫀 Major organs continue maturing.", "👁️ Eyes, nose and mouth continue taking shape."], birdFact: "Finch chicks hatch with limited movement and need intensive parental care.", mission: "Start a post-baby support list." },
   10: { sizeEmoji: "🍓", size: "strawberry", description: "Approximately 30 mm long.", birdEmoji: "🐦", bird: "a baby blue tit", science: ["🦴 Cartilage is beginning to become bone.", "🦷 Tooth buds are forming beneath the gums.", "🧠 Nerve and muscle connections are increasing."], birdFact: "Blue tit parents can make hundreds of feeding trips a day.", mission: "Plan one low-effort date night." },
   11: { sizeEmoji: "🍈", size: "fig", description: "Approximately 4 cm long.", birdEmoji: "🐥", bird: "a growing robin chick", science: ["🖐️ Fingers and toes are separating.", "🫀 Blood vessels continue spreading through the body.", "🦵 Small movements are possible, though not usually felt."], birdFact: "Robins are famously territorial and often defend their patch year-round.", mission: "Plan a big-sibling moment for Cillian." },
   12: { sizeEmoji: "🍋", size: "small lime", description: "Approximately 5 to 6 cm long.", birdEmoji: "🪺", bird: "a thrush egg", science: ["🧠 Reflexes are developing.", "🦴 The skeleton continues strengthening.", "🫀 Major organs are present and maturing."], birdFact: "Song thrush eggs are blue with dark speckles.", mission: "Celebrate the first-trimester milestone." },
-  13: { sizeEmoji: "🍑", size: "peach", description: "Approximately 7 cm long.", birdEmoji: "🐦", bird: "a young starling", science: ["🦴 Bones continue strengthening.", "🖐️ Fingerprints begin their unique patterning.", "🫃 The second trimester begins."], birdFact: "Starlings can mimic other birds, machinery and human-made sounds.", mission: "Plan a big-sibling moment for Cillian." },
-  14: { sizeEmoji: "🍋", size: "lemon", description: "Approximately 8 to 9 cm long.", birdEmoji: "🐤", bird: "a growing swallow chick", science: ["🙂 Facial muscles can make tiny movements.", "🦵 Limbs can move more freely.", "🫀 The placenta supports oxygen and nutrients."], birdFact: "Swallows migrate thousands of miles between Europe and southern Africa.", mission: "Choose Baby's bird nickname" },
+  13: { sizeEmoji: "🍑", size: "peach", description: "Approximately 7 cm long.", birdEmoji: "🐦", bird: "a young starling", science: ["🦴 Bones continue strengthening.", "🖐️ Fingerprints begin their unique patterning.", "🫃 The second trimester begins."], birdFact: "Starlings can mimic other birds, machinery and human-made sounds.", mission: "Take the first official field photograph." },
+  14: { sizeEmoji: "🍋", size: "lemon", description: "Approximately 8 to 9 cm long.", birdEmoji: "🐤", bird: "a growing swallow chick", science: ["🙂 Facial muscles can make tiny movements.", "🦵 Limbs can move more freely.", "🫀 The placenta supports oxygen and nutrients."], birdFact: "Swallows migrate thousands of miles between Europe and southern Africa.", mission: "Choose Baby's first birdwatching location." },
   15: { sizeEmoji: "🍎", size: "apple", description: "Approximately 10 cm long.", birdEmoji: "🐦", bird: "a fledgling house sparrow", science: ["👂 Hearing structures continue developing.", "🦴 The skeleton is becoming more visible on scans.", "🩸 Blood-forming systems are developing."], birdFact: "House sparrows are highly social and often nest near people.", mission: "Save useful appointment and emergency contacts." },
   16: { sizeEmoji: "🥑", size: "avocado", description: "Approximately 11 to 12 cm long.", birdEmoji: "🐧", bird: "a tiny puffin chick", science: ["🦵 Movements are becoming more coordinated.", "👁️ Eyes can make small movements.", "🦴 Muscles and bones continue developing."], birdFact: "Puffins carry several fish at once using spines inside their beaks.", mission: "Create the great baby-name shortlist." },
-  17: { sizeEmoji: "🍐", size: "pear", description: "Approximately 13 cm long.", birdEmoji: "🐦", bird: "a young robin", science: ["🧠 Nervous system connections are increasing.", "🦴 Bone tissue continues hardening.", "👶 Baby is gaining length and strength."], birdFact: "Young robins have speckled brown feathers before getting a red breast.", mission: "Choose one thing that makes daily life easier for mum." },
+  17: { sizeEmoji: "🍐", size: "pear", description: "Approximately 13 cm long.", birdEmoji: "🐦", bird: "a young robin", science: ["🧠 Nervous system connections are increasing.", "🦴 Bone tissue continues hardening.", "👶 Baby is gaining length and strength."], birdFact: "Young robins have speckled brown feathers before getting a red breast.", mission: "Choose one thing that makes daily life easier." },
   18: { sizeEmoji: "🍠", size: "sweet potato", description: "Approximately 14 cm long.", birdEmoji: "🦆", bird: "a fluffy duckling", science: ["👂 Hearing is developing.", "🦵 Movement may become noticeable soon.", "🧠 Sensory pathways are maturing."], birdFact: "Ducklings can walk and swim soon after hatching.", mission: "Find a big-sibling book for Cillian." },
-  19: { sizeEmoji: "🥭", size: "mango", description: "Approximately 15 cm long.", birdEmoji: "🐦", bird: "a small blackbird chick", science: ["🧴 Vernix begins helping protect the skin.", "👂 Baby may respond to sounds.", "🧠 The senses continue developing."], birdFact: "Blackbirds have rich alarm calls that warn other birds of danger.", mission: "Start getting all of Cillians newborn clothes ready for baby number 2!" },
+  19: { sizeEmoji: "🥭", size: "mango", description: "Approximately 15 cm long.", birdEmoji: "🐦", bird: "a small blackbird chick", science: ["🧴 Vernix begins helping protect the skin.", "👂 Baby may respond to sounds.", "🧠 The senses continue developing."], birdFact: "Blackbirds have rich alarm calls that warn other birds of danger.", mission: "Check what can be reused from Baby Number One." },
   20: { sizeEmoji: "🍌", size: "banana", description: "Around the halfway mark.", birdEmoji: "🐦", bird: "a very busy baby blue tit", science: ["📡 This is around the halfway point.", "🦵 Movements may become clearer.", "👶 Growth continues rapidly."], birdFact: "Blue tits time nesting so chicks hatch when caterpillars are abundant.", mission: "Celebrate the halfway observation point." },
   21: { sizeEmoji: "🥕", size: "carrot", description: "Long and growing steadily.", birdEmoji: "🦆", bird: "a growing duckling", science: ["🧠 Sleep-wake patterns may begin.", "🦵 Kicks and rolls can become stronger.", "🩸 Blood production continues."], birdFact: "Ducklings communicate with their mother before they hatch.", mission: "Choose one easy family meal for tired evenings." },
   22: { sizeEmoji: "🫒", size: "papaya", description: "Gaining weight steadily.", birdEmoji: "🐥", bird: "a young moorhen chick", science: ["👁️ Eyelids and eyes keep developing.", "👂 Sound responses increase.", "🫁 Lung development continues."], birdFact: "Moorhen chicks have huge feet that help them clamber through waterside plants.", mission: "Review the useful baby kit list." },
@@ -36,11 +36,11 @@ const weeklyData = {
   33: { sizeEmoji: "🍍", size: "pineapple", description: "Spiky comparison, soft baby.", birdEmoji: "🐦", bird: "a young cormorant", science: ["🦴 Bones are hardening.", "👶 The skull remains flexible for birth.", "🧠 Brain growth continues."], birdFact: "Cormorants often spread their wings to dry after diving.", mission: "Check the hospital route and parking." },
   34: { sizeEmoji: "🍈", size: "cantaloupe melon", description: "Melon-level seriousness.", birdEmoji: "🦢", bird: "a growing swan cygnet", science: ["👶 Baby continues building fat stores.", "🫁 Lungs keep maturing.", "🧠 Sleep cycles may be more distinct."], birdFact: "Swans form strong pair bonds and are attentive parents.", mission: "Finish one useful outstanding job." },
   35: { sizeEmoji: "🍈", size: "honeydew melon", description: "A sizeable passenger.", birdEmoji: "🐦", bird: "a nearly fledged blackbird", science: ["👶 There is less room, but movement continues.", "🧠 Brain and body keep maturing.", "🫁 Lungs are close to readiness."], birdFact: "Young blackbirds leave the nest before they can fly perfectly.", mission: "Prepare one easy post-baby meal." },
-  36: { sizeEmoji: "🥬", size: "romaine lettuce", description: "Long, leafy and nearly ready.", birdEmoji: "🐥", bird: "a nearly ready fledgling", science: ["👶 Baby may begin moving lower.", "🫁 Lungs are nearly mature.", "🦵 Movements may feel different as space tightens."], birdFact: "Fledglings often spend days on the ground while parents keep feeding them.", mission: "Start eating spicy food to activate the Capricorn!!." },
+  36: { sizeEmoji: "🥬", size: "romaine lettuce", description: "Long, leafy and nearly ready.", birdEmoji: "🐥", bird: "a nearly ready fledgling", science: ["👶 Baby may begin moving lower.", "🫁 Lungs are nearly mature.", "🦵 Movements may feel different as space tightens."], birdFact: "Fledglings often spend days on the ground while parents keep feeding them.", mission: "Check Mum, Baby and birth-partner essentials." },
   37: { sizeEmoji: "🥬", size: "Swiss chard", description: "Officially term territory.", birdEmoji: "🐣", bird: "a chick ready to leave the nest", science: ["🐣 From 37 weeks, pregnancy is generally considered term.", "👶 Baby continues gaining weight.", "🧠 Final development continues."], birdFact: "Many chicks communicate with parents from inside the egg before hatching.", mission: "Keep bags ready and phones charged." },
   38: { sizeEmoji: "🎃", size: "small pumpkin", description: "Pumpkin watch has begun.", birdEmoji: "🐦", bird: "a fully feathered fledgling", science: ["👶 Baby is nearly ready for arrival.", "🫁 Organs are mature enough for life outside.", "🧠 Brain growth continues after birth too."], birdFact: "Fledging is a process, not a single neat moment.", mission: "Check fuel, bags, childcare, contacts and routes." },
   39: { sizeEmoji: "🍉", size: "watermelon", description: "The classic final boss of fruit comparisons.", birdEmoji: "🐥", bird: "a fledgling waiting for the perfect moment", science: ["👶 Baby's organs are ready for life outside the womb.", "🧠 Baby keeps building brain connections.", "🫀 The placenta continues supporting Baby until birth."], birdFact: "Some birds delay leaving the nest until conditions feel right. Baby may sympathise.", mission: "Keep the coming days flexible." },
-  40: { sizeEmoji: "👶", size: "newborn baby", description: "The research subject is ready for publication.", birdEmoji: "🐣", bird: "a chick ready to hatch", science: ["🎉 The due date is here.", "👶 Due dates are estimates, not appointments.", "❤️ The research team is ready whenever Baby is."], birdFact: "Hatching, fledging and arriving all happen on the baby's schedule.", mission: "Await deployment. Baby controls the timetable. Research team still holding out hope for a Capricorn baby!" }
+  40: { sizeEmoji: "👶", size: "newborn baby", description: "The research subject is ready for publication.", birdEmoji: "🐣", bird: "a chick ready to hatch", science: ["🎉 The due date is here.", "👶 Due dates are estimates, not appointments.", "❤️ The research team is ready whenever Baby is."], birdFact: "Hatching, fledging and arriving all happen on the baby's schedule.", mission: "Await deployment. Baby controls the timetable." }
 };
 
 function pregnancyState() {
@@ -95,56 +95,60 @@ function showWeek(week) {
   const data = weeklyData[week] || weeklyData[4];
   const detail = document.getElementById("weekDetail");
 
-  detail.innerHTML =
-    '<div class="field-report-hero">' +
-      '<div>' +
-        '<p class="eyebrow">Selected Field Report</p>' +
-        '<h3>Week ' + week + '</h3>' +
-        '<p class="field-report-subtitle">Current specimen: ' + data.size + ' with strong ' + data.bird + ' energy.</p>' +
-      '</div>' +
-      '<div class="field-report-badge">' +
-        '<span>' + data.sizeEmoji + '</span>' +
-        '<span>' + data.birdEmoji + '</span>' +
-      '</div>' +
-    '</div>' +
+  detail.innerHTML = `
+    <div class="field-report-hero">
+      <div>
+        <p class="eyebrow">Selected Field Report</p>
+        <h3>Week ${week}</h3>
+        <p class="field-report-subtitle">Current specimen: ${data.size} with strong ${data.bird} energy.</p>
+      </div>
 
-    '<div class="comparison-showcase">' +
-      '<article class="showcase-tile produce-tile">' +
-        '<span class="showcase-icon">' + data.sizeEmoji + '</span>' +
-        '<small>Vegetable / Fruit Scale</small>' +
-        '<strong>' + data.size + '</strong>' +
-        '<p>' + data.description + '</p>' +
-      '</article>' +
-      '<article class="showcase-tile bird-tile">' +
-        '<span class="showcase-icon">' + data.birdEmoji + '</span>' +
-        '<small>Bird Scale</small>' +
-        '<strong>' + data.bird + '</strong>' +
-        '<p>' + data.birdFact + '</p>' +
-      '</article>' +
-    '</div>' +
+      <div class="field-report-badge">
+        <span>${data.sizeEmoji}</span>
+        <span>${data.birdEmoji}</span>
+      </div>
+    </div>
 
-    '<div class="mission-strip">' +
-      '<span>🎯</span>' +
-      '<div>' +
-        '<small>Research Team Mission</small>' +
-        '<strong>' + data.mission + '</strong>' +
-      '</div>' +
-    '</div>' +
+    <div class="comparison-showcase">
+      <article class="showcase-tile produce-tile">
+        <span class="showcase-icon">${data.sizeEmoji}</span>
+        <small>Vegetable / Fruit Scale</small>
+        <strong>${data.size}</strong>
+        <p>${data.description}</p>
+      </article>
 
-    '<div class="field-card-row">' +
-      '<article>' +
-        '<span>🔬</span>' +
-        '<small>Abi&apos;s Science Note</small>' +
-        '<p>' + data.science[0].slice(3) + '</p>' +
-      '</article>' +
-      '<article>' +
-        '<span>🪽</span>' +
-        '<small>Stork Status</small>' +
-        '<p>' + routeMessage(Math.round((week / 40) * 100)) + '</p>' +
-      '</article>' +
-    '</div>';
+      <article class="showcase-tile bird-tile">
+        <span class="showcase-icon">${data.birdEmoji}</span>
+        <small>Bird Scale</small>
+        <strong>${data.bird}</strong>
+        <p>${data.birdFact}</p>
+      </article>
+    </div>
 
-  document.querySelectorAll(".week-button").forEach(function (button) {
+    <div class="mission-strip">
+      <span>🎯</span>
+      <div>
+        <small>Research Team Mission</small>
+        <strong>${data.mission}</strong>
+      </div>
+    </div>
+
+    <div class="field-card-row">
+      <article>
+        <span>🔬</span>
+        <small>Abi's Science Note</small>
+        <p>${data.science[0].slice(3)}</p>
+      </article>
+
+      <article>
+        <span>🪽</span>
+        <small>Stork Status</small>
+        <p>${routeMessage(Math.round((week / 40) * 100))}</p>
+      </article>
+    </div>
+  `;
+
+  document.querySelectorAll(".week-button").forEach(button => {
     button.classList.toggle("selected", Number(button.dataset.week) === week);
   });
 }
@@ -160,15 +164,12 @@ function renderTimeline(currentWeek) {
     button.type = "button";
     button.className = "week-button";
     button.dataset.week = week;
-    button.innerHTML = '<span>' + data.sizeEmoji + '</span>' + week;
+    button.innerHTML = `<span>${data.sizeEmoji}</span>${week}`;
 
     if (week < currentWeek) button.classList.add("past");
     if (week === currentWeek) button.classList.add("current");
 
-    button.addEventListener("click", function () {
-      showWeek(week);
-    });
-
+    button.addEventListener("click", () => showWeek(week));
     timeline.appendChild(button);
   }
 }
@@ -176,35 +177,30 @@ function renderTimeline(currentWeek) {
 function renderPage() {
   const state = pregnancyState();
   const data = weeklyData[state.currentWeek] || weeklyData[4];
-  const capricorn = capricornMessage();
+  const capricorn = capricornMessage(state.daysRemaining);
 
   document.getElementById("daysRemaining").textContent = state.daysRemaining.toLocaleString("en-GB");
   document.getElementById("currentWeek").textContent = state.currentWeek;
   document.getElementById("trimesterText").textContent = trimester(state.currentWeek);
-  document.getElementById("weekDayText").textContent = "Week " + state.currentWeek + " + " + state.weekDay + " days";
-  document.getElementById("pregnancyProgress").style.width = state.progress + "%";
-  document.getElementById("progressText").textContent = state.progress + "% of the estimated 40-week migration complete";
+  document.getElementById("weekDayText").textContent = `Week ${state.currentWeek} + ${state.weekDay} days`;
+  document.getElementById("pregnancyProgress").style.width = `${state.progress}%`;
+  document.getElementById("progressText").textContent = `${state.progress}% of the estimated 40-week migration complete`;
 
   document.getElementById("sizeEmoji").textContent = data.sizeEmoji;
   document.getElementById("sizeName").textContent = data.size;
-  document.getElementById("sizeDescription").textContent =
-  "This week, Baby is approximately the size of a " + data.size + ". " + data.description;
-
+  document.getElementById("sizeDescription").textContent = data.description;
   document.getElementById("birdEmoji").textContent = data.birdEmoji;
   document.getElementById("birdName").textContent = data.bird;
-  document.getElementById("birdComparison").textContent =
-  "Robert's department has reviewed the evidence and declared this comparison extremely official.";
+  document.getElementById("birdComparison").textContent = "A carefully peer-reviewed comparison from the Bird Expert's department.";
   document.getElementById("birdFact").textContent = data.birdFact;
 
   document.getElementById("scienceFacts").innerHTML = data.science
-    .map(function (fact) {
-      return '<div class="fact-item"><span>' + fact.slice(0, 2) + '</span><p>' + fact.slice(3) + '</p></div>';
-    })
+    .map(fact => `<div class="fact-item"><span>${fact.slice(0, 2)}</span><p>${fact.slice(3)}</p></div>`)
     .join("");
 
-  document.getElementById("routeTitle").textContent = "Route progress: " + state.progress + "%";
+  document.getElementById("routeTitle").textContent = `Route progress: ${state.progress}%`;
   document.getElementById("routeMessage").textContent = routeMessage(state.progress);
-  document.getElementById("storkMarker").style.left = state.progress + "%";
+  document.getElementById("storkMarker").style.left = `${state.progress}%`;
 
   document.getElementById("capricornTitle").textContent = capricorn.title;
   document.getElementById("capricornText").textContent = capricorn.text;
@@ -216,7 +212,7 @@ function renderPage() {
 const randomWeekButton = document.getElementById("randomWeekButton");
 
 if (randomWeekButton) {
-  randomWeekButton.addEventListener("click", function () {
+  randomWeekButton.addEventListener("click", () => {
     const week = Math.floor(Math.random() * 37) + 4;
     showWeek(week);
   });
