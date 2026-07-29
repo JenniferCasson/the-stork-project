@@ -50,7 +50,7 @@ const weirdBirdFacts = [
   "An ostrich's eye is bigger than its brain - reminds me of this big bird enthusiast...",
   "Most birds have hollow bones to help reduce weight for flight.",
   "Some vultures cool themselves off by urinating on their own legs - such a boy thing to do.",
-  "Pigeons can recognize themselves in mirrors - research team is unsure how this was tested."
+  "Pigeons can recognize themselves in mirrors - research team is unsure how this was tested.",
   "Swifts can stay airborne for months at a time, eating and even sleeping while flying. They would be terrible at maternity leave.",
   "Emperor penguin dads keep the egg warm on their feet for over two months without eating. Robert has no excuses.",
   "Magpies can recognise familiar human faces, so be nice to them. They remember.",
