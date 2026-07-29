@@ -41,12 +41,16 @@ const scienceNotes = [
 const weirdBirdFacts = [
   "Puffins can hold several fish in their beak at once, which is exactly the snack-carrying energy required here.",
   "Barn owls fly almost silently because their feathers break up turbulence.",
-  "Ducklings can communicate with their mother before they hatch.",
+  "Ducklings can communicate with their mother before they hatch - so geting talking to the bump just incase.",
   "Starlings can mimic machinery, phones and other birds, which feels like showing off.",
   "Some chicks call from inside the egg before hatching, presumably to comment on conditions.",
   "Kestrels can hover in one place while hunting, which is a skill the stork has not yet demonstrated.",
-  "Young blackbirds often leave the nest before they can fly properly. Bold strategy.",
+  "Young blackbirds often leave the nest before they can fly properly. Bold strategy - feels like a boy thing to do.",
   "Goslings imprint quickly, so the research team should prepare for strong opinions."
+  "An ostrich's eye is bigger than its brain - Reminds me of this big bird enthusiast..."
+  "Most birds have hollow bones to help reduce weight for flight."
+  "Some vultures cool themselves off by urinating on their own legs - Such a boy thing to do"  
+  "Pigeons can recognize themselves in mirrors - Research team is unsure how this was tested."
 ];
 
 const missions = [
@@ -54,8 +58,8 @@ const missions = [
   "Review whether Baby has acknowledged the Capricorn memo.",
   "Inspect all Cillian entertainment supplies.",
   "Ask the Bird Department for an unnecessarily specific comparison.",
-  "Confirm Mum has had water, food and peace.",
-  "Check whether the stork is still claiming traffic."
+  "Confirm Mum has had food, peace and a good book.",
+  "Check whether the stork is going to be on time."
 ];
 
 function pregnancyState() {
