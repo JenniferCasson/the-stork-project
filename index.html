@@ -3,195 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#244f44">
-  <meta name="description" content="Operation Second Baby: a playful pregnancy tracker.">
+  <meta name="theme-color" content="#214e43">
+  <meta name="description" content="Operation Second Baby: a playful baby countdown and family field log.">
   <title>Operation Second Baby</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <main class="page-shell">
-  <header class="opening-section">
-  <div class="opening-card">
-    <div class="hero-logo">
-      <div class="bird-logo clean-bird-logo" aria-hidden="true">
-        <span>Bird</span>
-        <span>Bird</span>
-        <span>Bird</span>
+  <main class="page">
+    <header class="top-logo" aria-label="Operation Second Baby">
+      <h1>Operation: Second Baby</h1>
+    </header>
+
+    <section class="opening-grid">
+      <div class="opening-copy">
+        <img class="stork-photo" src="stork.png" alt="Stork carrying a baby">
+
+        <article class="aim-card">
+          <p class="eyebrow">Aim</p>
+          <p>Following one tiny human from poppy seed to adorable newborn.</p>
+        </article>
+
+        <article class="mission-card">
+          <p class="eyebrow">Current Mission</p>
+          <h2>Keeping Mum fed, Cillian entertained, and convincing Baby to arrive as a Capricorn.</h2>
+          <p>So far, Baby has shown little interest in responding to negotiations.</p>
+        </article>
       </div>
 
-      <svg class="arched-title" viewBox="0 0 720 220" aria-label="Operation Second Baby">
-        <path id="titleCurve" d="M110 160 C240 40, 480 40, 610 160" fill="none"></path>
-        <text>
-          <textPath href="#titleCurve" startOffset="50%" text-anchor="middle">
-            Operation Second Baby
-          </textPath>
-        </text>
-      </svg>
-    </div>
-
-    <figure class="opening-photo">
-      <img src="family.png" alt="Robert, Abi and Cillian">
-    </figure>
-
-    <section class="aim-card">
-      <p>
-        Aim: Following one tiny human from poppy seed to adorable newborn.
-      </p>
+      <figure class="family-photo">
+        <img src="family.png" alt="Robert, Abi and Cillian">
+      </figure>
     </section>
 
-    <section class="mission-banner" aria-labelledby="missionHeading">
-      <p class="eyebrow">Current Mission</p>
-      <h2 id="missionHeading">
-        Keeping Mum fed, Cillian entertained, and convincing Baby to arrive as a Capricorn.
-      </h2>
-      <p><em>So far, Baby has shown little interest in responding to negotiations.</em></p>
-    </section>
-  </div>
-</header>
-
-    <section class="status-grid section-block" aria-label="Current pregnancy status">
-      <article class="status-card countdown-card">
-        <p class="eyebrow">Stork Arrival Countdown</p>
-        <span id="daysRemaining" class="mega-number">...</span>
-        <p>days until the estimated hatching date</p>
-        <div class="progress-track">
-          <div id="pregnancyProgress" class="progress-fill"></div>
-        </div>
-        <p id="progressText" class="small-note">Calculating flight progress...</p>
-      </article>
-
-      <article class="status-card">
-        <p class="eyebrow">Current Field Observation</p>
-        <span id="currentWeek" class="mega-number">...</span>
-        <p id="trimesterText">Calculating trimester...</p>
-        <p id="weekDayText" class="small-note">Checking field notes...</p>
-      </article>
-
-      <article class="status-card capricorn-card">
-        <p class="eyebrow">Capricorn Watch</p>
-        <h2 id="capricornTitle">Negotiations ongoing</h2>
-        <p id="capricornText">The research team remains hopeful.</p>
-      </article>
-    </section>
-
-    <section class="comparison-panel section-block">
-      <article class="comparison-card vegetable-card">
-        <p class="eyebrow">Fruit / Vegetable Scale</p>
-        <div id="sizeEmoji" class="comparison-emoji">🌱</div>
-        <h2 id="sizeName">Loading tiny produce...</h2>
-        <p id="sizeDescription">Measuring Baby against the official snack drawer.</p>
-      </article>
-
-      <article class="comparison-card bird-card">
-        <p class="eyebrow">Bird Comparison</p>
-        <div id="birdEmoji" class="comparison-emoji">🐣</div>
-        <h2 id="birdName">Loading hatchling...</h2>
-        <p id="birdComparison">Consulting the Bird Expert.</p>
-      </article>
-    </section>
-
-    <section class="parent-notes section-block">
-      <article class="card science-card">
-        <p class="eyebrow">Mum Notes</p>
-        <h2 id="scienceTitle">Abi's Tiny Human Lab Report</h2>
-        <div id="scienceFacts" class="fact-list"></div>
-      </article>
-
-      <article class="card bird-fact-card">
-        <p class="eyebrow">Dad Facts</p>
-        <h2>Robert's Bird Fact</h2>
-        <p id="birdFact">Preparing an academically rigorous bird fact...</p>
-      </article>
-    </section>
-
-    <section class="route-team-grid section-block">
-      <article class="card stork-card">
-        <p class="eyebrow">Route Progress</p>
-        <h2 id="routeTitle">Flight plan loading...</h2>
-
-        <div class="route">
-          <span>🪺</span>
-          <div class="route-line">
-            <span id="storkMarker">🪽</span>
-          </div>
-          <span>👶</span>
-        </div>
-
-        <p id="routeMessage">The stork is pretending to read the map.</p>
-
-        <div class="stork-image">
-          <img src="stork.png" alt="A playful illustrated stork delivery route">
-        </div>
-      </article>
-
-      <article class="card family-card">
-        <p class="eyebrow">Research Team</p>
-        <h2>Project Roles</h2>
-
-        <div class="team-list">
-          <div>
-            <span>👩‍🔬</span>
-            <strong>Mum</strong>
-            <p>Kick-ass Doctor and Head of Human Construction.</p>
-          </div>
-
-          <div>
-            <span>🦅</span>
-            <strong>Dad</strong>
-            <p>Mediocre Bird Enthusiast and Official Nest Logistics Manager.</p>
-          </div>
-
-          <div>
-            <span>🐥</span>
-            <strong>Cillian</strong>
-            <p>Soon-to-be Big Brother and official Toy Inspector.</p>
-          </div>
-
-          <div>
-            <span>🧑‍💻</span>
-            <strong>Auntie</strong>
-            <p>Celebrated Capricorn, Website Builder, and person with too much time on her hands.</p>
-          </div>
-
-          <div>
-            <span>💼</span>
-            <strong>Grandma</strong>
-            <p>Official Boss, Project Sponsor, and the person paying for this.</p>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <section class="week-explorer section-block">
-      <div class="section-header">
+    <section class="observation-card">
+      <div class="observation-header">
         <div>
-          <p class="eyebrow">Field Log</p>
-          <h2>The Forty-Week Migration</h2>
+          <p class="eyebrow">Current Field Observation</p>
+          <h2>Pregnancy Week <span id="currentWeek">...</span></h2>
         </div>
-
-        <button id="randomWeekButton" type="button">Random week</button>
+        <p id="trimesterText" class="trimester-pill">Calculating trimester...</p>
       </div>
 
-      <article id="weekDetail" class="week-detail">
-        Loading field report...
-      </article>
+      <div class="comparison-grid">
+        <article class="mini-comparison produce-panel">
+          <p class="eyebrow">Fruit / Vegetable Scale</p>
+          <div id="sizeEmoji" class="comparison-emoji">🌱</div>
+          <p>This week, Baby is approximately the size of a</p>
+          <h3 id="sizeName">very mysterious vegetable</h3>
+          <p id="sizeDescription">Gathering measurements from the nest...</p>
+        </article>
+
+        <article class="mini-comparison bird-panel">
+          <p class="eyebrow">Ornithological Comparison</p>
+          <div id="birdEmoji" class="comparison-emoji">🐣</div>
+          <h3 id="birdName">Tiny hatchling</h3>
+          <p id="birdComparison">Baby is currently being compared with an appropriately sized member of the bird kingdom.</p>
+        </article>
+      </div>
     </section>
 
-    <section class="week-calendar section-block">
-      <p class="eyebrow">Full Week Calendar</p>
-      <h2>Choose a Week</h2>
-      <p class="week-picker-label">
-        Pick any week to inspect the field notes.
-      </p>
+    <section class="dashboard-grid">
+      <div class="main-column">
+        <article class="card lab-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Baby Lab Report</p>
+              <h2>Abi's Tiny Human Lab Report</h2>
+            </div>
+          </div>
+          <div id="scienceFacts" class="science-list"></div>
+          <p class="lab-note">Laboratory note: weekly comparisons are approximate and not a substitute for advice from a midwife, doctor or maternity team.</p>
+        </article>
 
-      <div id="timeline" class="timeline"></div>
+        <article class="card dad-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Avian Peer Review</p>
+              <h2>Robert's Weird Bird Facts</h2>
+            </div>
+          </div>
+          <p id="birdFact" class="large-fact">Preparing a suspiciously specific bird fact...</p>
+          <p class="quiet">No storks were consulted during the production of this tracker.</p>
+        </article>
+
+        <article class="field-log card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Field Log</p>
+              <h2>The Forty-Week Migration</h2>
+            </div>
+          </div>
+          <article id="weekDetail" class="week-detail">Loading field report...</article>
+        </article>
+
+        <article class="calendar-section card">
+          <p class="eyebrow">Full Week Calendar</p>
+          <h2>Choose a Week</h2>
+          <div id="timeline" class="timeline"></div>
+        </article>
+      </div>
+
+      <aside class="side-column">
+        <button id="countdownCard" class="status-card countdown-card" type="button" aria-expanded="false">
+          <span class="eyebrow">Stork Arrival Countdown</span>
+          <strong id="daysRemaining" class="big-number">...</strong>
+          <span>days until the estimated arrival</span>
+          <span class="countdown-route" aria-hidden="true">
+            <span class="route-end">Nest</span>
+            <span class="countdown-route-line"><span id="countdownWingMarker">Wings</span></span>
+            <span class="route-end">Baby</span>
+          </span>
+          <span id="countdownSecret" class="secret-note">Tap to reveal classified countdown intelligence.</span>
+        </button>
+
+        <article class="status-card capricorn-card">
+          <p class="eyebrow">Capricorn Watch</p>
+          <h2 id="capricornTitle">Negotiations ongoing</h2>
+          <p id="capricornText">The research team remains hopeful.</p>
+          <p class="deadline-pill">Official Capricorn deadline: 19 January 2027</p>
+          <div class="trait-list" aria-label="Best Capricorn traits">
+            <span>Determined</span>
+            <span>Loyal</span>
+            <span>Patient</span>
+            <span>Secretly hilarious</span>
+          </div>
+          <button id="negotiateButton" class="small-button" type="button">Send memo</button>
+          <p id="capricornReply" class="memo-reply">Awaiting response from Baby's office.</p>
+        </article>
+
+        <article class="card route-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Stork Delivery Route</p>
+              <h2 id="routeTitle">Flight plan loading...</h2>
+            </div>
+            <button id="routeButton" class="small-button" type="button">Update</button>
+          </div>
+          <div class="route">
+            <span>Nest</span>
+            <div class="route-line"><span id="storkMarker">Stork</span></div>
+            <span>Baby</span>
+          </div>
+          <p id="routeMessage">The stork is pretending to read the map.</p>
+        </article>
+
+        <article class="card dataset-card">
+          <p class="eyebrow">Current Dataset</p>
+          <div class="dataset-list">
+            <div><span>Days completed</span><strong id="daysCompleted">...</strong></div>
+            <div><span>Days remaining</span><strong id="daysRemainingSmall">...</strong></div>
+            <div><span>Week detail</span><strong id="weekDayText">...</strong></div>
+            <div><span>Likely star sign</span><strong>Aquarius</strong></div>
+          </div>
+          <p class="capricorn-note">Capricorn monitoring window: until approximately 19 January. The research team remains cautiously optimistic.</p>
+        </article>
+      </aside>
+    </section>
+
+    <section class="research-team card">
+      <p class="eyebrow">Research Team</p>
+      <h2>Project Roles</h2>
+      <div class="team-list">
+        <div><span>Scientist</span><strong>Mum</strong><p>Kick-ass Doctor and Head of Human Construction.</p></div>
+        <div><span>Bird Dept.</span><strong>Dad</strong><p>Mediocre bird enthusiast and Official Nest Logistics Manager.</p></div>
+        <div><span>Big Brother</span><strong>Cillian</strong><p>Soon-to-be Big Brother and official Toy Inspector.</p></div>
+        <div><span>Website</span><strong>Auntie</strong><p>Celebrated Capricorn and person with too much time on her hands.</p></div>
+        <div><span>Sponsor</span><strong>Grandma</strong><p>Official Boss, Project Sponsor, and the person paying for this.</p></div>
+      </div>
     </section>
 
     <footer>
-      Built with questionable science, random bird facts and lots of love for Robert, Abi, Cillian and Baby #2 from the OG Capricorn!
+      Built with questionable science, weird bird facts and love from the OG Capricorn.
     </footer>
   </main>
+
+  <div id="capricornModal" class="modal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="capricornModalTitle">
+      <p class="eyebrow">Special Announcement</p>
+      <h2 id="capricornModalTitle">Capricorn Deadline Confirmed</h2>
+      <p>The research team has identified 19 January 2027 as the official Capricorn arrival deadline.</p>
+      <p>Baby has been informed. Baby has not signed anything.</p>
+      <button id="closeCapricornModal" class="small-button" type="button">Noted</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
